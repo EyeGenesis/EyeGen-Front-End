@@ -2,6 +2,7 @@ import style from "./Home.module.css";
 import Hero from "./Hero/Hero";
 import Seguranca from "./Seguranca/Seguranca";
 import InfoMascote from "./InfoMascote/InfoMascote";
+import NossoProduto from "./NossoProduto/NossoProduto";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         </div>
         <Seguranca />
         <InfoMascote />
+        <NossoProduto />
       </section>
     </main>
   );

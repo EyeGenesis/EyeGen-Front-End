@@ -1,0 +1,193 @@
+.secaoProduto {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+.containerTitulo {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerTitulo h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.containerTitulo p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.botaoComprar {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botaoComprar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gradeCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gradeCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cartao {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  min-height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+}
+
+.cartao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.cartaoGrande {
+  grid-column: 1 / -1;
+  min-height: 450px;
+}
+
+.espacoVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  z-index: 0;
+}
+.espacoVideo::before {
+  content: "Seu vídeo aqui";
+  font-size: 0.9rem;
+}
+
+.conteudoCartao {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+.icone {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.conteudoCartao h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.conteudoCartao p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.75rem 0;
+  opacity: 0.9;
+}
+
+.conteudoCartao footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.linkSaberMais {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.botaoCirculo {
+  background-color: #9eff00;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botaoCirculo:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #9eff00;
+}
+
+/* --- responsividade --- */
+@media (max-width: 768px) {
+  .secaoProduto {
+    padding: 3rem 1.5rem;
+  }
+  .gradeCards {
+    grid-template-columns: 1fr;
+  }
+  .cartaoGrande {
+    min-height: 350px;
+  }
+  .cartao {
+    min-height: 280px;
+  }
+
+  .containerTitulo h2 {
+    font-size: 2rem;
+  }
+}
