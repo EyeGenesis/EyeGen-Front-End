@@ -1,6 +1,7 @@
 import style from "./Home.module.css";
 import Hero from "./Hero/Hero";
 import Seguranca from "./Seguranca/Seguranca";
+import InfoMascote from "./InfoMascote/InfoMascote";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           </h1>
         </div>
         <Seguranca />
+        <InfoMascote />
       </section>
     </main>
   );
