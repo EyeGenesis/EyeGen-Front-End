@@ -7,6 +7,10 @@ import {
   FaBatteryHalf,
   FaShieldAlt,
 } from "react-icons/fa";
+import designProduto from "../../../assets/img/design-produto.mp4";
+import cameraProduto from "../../../assets/img/camera-produto.mp4";
+import bateriaProduto from "../../../assets/img/bateria-produto.mp4";
+import materialProduto from "../../../assets/img/material-produto.png";
 
 const NossoProduto = () => {
   return (
@@ -20,7 +24,16 @@ const NossoProduto = () => {
       </div>
       <div className={estilos.gradeCards}>
         <article className={`${estilos.cartao} ${estilos.cartaoGrande}`}>
-          <div className={estilos.espacoVideo}></div>
+          <div className={estilos.espacoVideo}>
+            <video
+              src={designProduto}
+              className={estilos.videoElemento}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <div className={estilos.conteudoCartao}>
             <FaShieldAlt className={estilos.icone} size={24} />
             <h3>Design Confortável</h3>
@@ -37,7 +50,16 @@ const NossoProduto = () => {
           </div>
         </article>
         <article className={estilos.cartao}>
-          <div className={estilos.espacoVideo}></div>
+          <div className={estilos.espacoVideo}>
+            <video
+              src={cameraProduto}
+              className={estilos.videoElemento}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <div className={estilos.conteudoCartao}>
             <FaCamera className={estilos.icone} size={24} />
             <h3>Câmera de 1080p</h3>
@@ -54,7 +76,16 @@ const NossoProduto = () => {
           </div>
         </article>
         <article className={estilos.cartao}>
-          <div className={estilos.espacoVideo}></div>
+          <div className={estilos.espacoVideo}>
+            <video
+              src={bateriaProduto}
+              className={estilos.videoElemento}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <div className={estilos.conteudoCartao}>
             <FaBatteryHalf className={estilos.icone} size={24} />
             <h3>Bateria de Qualidade</h3>
@@ -71,7 +102,13 @@ const NossoProduto = () => {
           </div>
         </article>
         <article className={estilos.cartao}>
-          <div className={estilos.espacoVideo}></div>
+          <div className={estilos.espacoVideo}>
+            <img
+              src={materialProduto}
+              alt=""
+              className={estilos.imagemElemento}
+            />
+          </div>
           <div className={estilos.conteudoCartao}>
             <FaShieldAlt className={estilos.icone} size={24} />
             <h3>Material Resistente</h3>
