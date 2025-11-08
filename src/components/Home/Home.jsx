@@ -3,6 +3,7 @@ import Hero from "./Hero/Hero";
 import Seguranca from "./Seguranca/Seguranca";
 import InfoMascote from "./InfoMascote/InfoMascote";
 import NossoProduto from "./NossoProduto/NossoProduto";
+import QuemUsa from "./QuemUsa/QuemUsa";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Seguranca />
         <InfoMascote />
         <NossoProduto />
+        <QuemUsa />
       </section>
     </main>
   );
