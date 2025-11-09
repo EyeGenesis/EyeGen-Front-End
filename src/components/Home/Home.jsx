@@ -4,6 +4,7 @@ import Seguranca from "./Seguranca/Seguranca";
 import InfoMascote from "./InfoMascote/InfoMascote";
 import NossoProduto from "./NossoProduto/NossoProduto";
 import QuemUsa from "./QuemUsa/QuemUsa";
+import Comunidade from "./Comunidade/Comunidade";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <InfoMascote />
         <NossoProduto />
         <QuemUsa />
+        <Comunidade />
       </section>
     </main>
   );

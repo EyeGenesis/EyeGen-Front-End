@@ -1,0 +1,148 @@
+.secaoTitulo {
+  background-color: #f95780;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.secaoTitulo h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.secaoTitulo p {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.botaoFazerParte {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botaoFazerParte:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secaoCarrossel {
+  background-color: #ffebf0;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.secaoCarrossel h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.swiperContainer {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.swiperSlide {
+  width: 340px !important;
+  height: auto;
+}
+
+.cartao {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
+}
+.topoCartao {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+  flex-shrink: 0; 
+}
+
+.citacao {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0; 
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.infoAutor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: auto;
+}
+
+.nome {
+  font-weight: 700;
+}
+
+.local {
+  color: #777;
+}
+
+.nota {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* --- responsividade --- */
+@media (max-width: 768px) {
+  .secaoTitulo h2 {
+    font-size: 2rem;
+  }
+  .secaoCarrossel {
+    padding: 2rem 0;
+  }
+  .secaoCarrossel h3 {
+    padding-left: 1rem;
+  }
+  .swiperContainer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .swiperSlide {
+    width: 280px !important;
+  }
+  .topoCartao {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+  }
+  .avatar {
+    margin-bottom: 0.75rem;
+  }
+}
