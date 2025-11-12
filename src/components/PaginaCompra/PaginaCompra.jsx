@@ -5,7 +5,12 @@ import DetalhesProduto from './DetalhesProduto/DetalhesProduto';
 import SeletorCor from './SeletorCor/SeletorCor';
 import ControleQuantidade from './ControleQuantidade/ControleQuantidade';
 import MetodosPagamento from './MetodosPagamento/MetodosPagamento';
-import BotoesAcao from './BotoesAcao/BotoesAcao';
+/* import BotoesAcao from './BotoesAcao/BotoesAcao'; */
+
+import ImagemOculosUm from '../../assets/img/ImagemOculosUm.png';
+import ImagemOculosDois from '../../assets/img/ImagemOculosDois.png';
+import ImagemOculosTres from '../../assets/img/ImagemOculosTres.png';
+import ImagemOculosQuatro from '../../assets/img/ImagemOculosQuatro.png';
 
 export default function PaginaCompra() {
   // Dados do produto
@@ -16,10 +21,10 @@ export default function PaginaCompra() {
     avaliacoes: 193,
     estrelas: 4.5,
     imagens: [
-      '/images/ImagemOculosUm.png',
-      '/images/ImagemOculosDoispng',
-      '/images/ImagemOculosTres.png',
-      '/images/ImagemOculosQuatropng'
+        ImagemOculosUm,
+        ImagemOculosDois,
+        ImagemOculosTres,
+        ImagemOculosQuatro
     ],
     cores: [
       { id: 1, nome: 'Azul', valor: '#00BCD4' },
@@ -61,10 +66,8 @@ export default function PaginaCompra() {
             /> }
             
             { <ControleQuantidade /> }
-            
             { <MetodosPagamento /> }
             
-            { <BotoesAcao /> }
           </div>
 
         </div>
