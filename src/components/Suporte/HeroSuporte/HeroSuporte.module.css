@@ -1,6 +1,6 @@
 .heroSuporte {
   position: relative;
-  min-height: 80vh; 
+  min-height: 100vh; 
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   background-image: url('../../../assets/hero-suporte.png'); 
@@ -32,7 +32,7 @@
 }
 
 .preTitulo {
-  font-size: 1rem;
+  font-size: 2.5rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
