@@ -229,3 +229,33 @@
         pointer-events: auto;
     }
 }
+
+@media (max-width: 520px) {
+    .chat {
+
+        & .toggle {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        & .popup {
+            right: 0;
+            bottom: 100px;
+            height: 80%;
+            border-radius: 15px;
+            width: 100%;
+
+            & .chatHeader {
+                padding: 0px 15px;
+            }
+
+            & .chatBody {
+                padding: 25px 15px;
+            }
+
+            & .chatInput {
+                padding: 10px 15px 15px;
+            }
+        }
+    }
+}
