@@ -2,9 +2,11 @@ import React from 'react';
 import estilos from './AttFirmware.module.css';
 import { FaArrowRight } from 'react-icons/fa';
 import imagemMulher from '../../../assets/mulher-firmware.png'; 
+import retanguloTransicao from "../../../assets/suporte-transition2.png";
 
 const AttFirmware = () => {
   return (
+    
     <section className={estilos.secaoFirmware}>
       <div className={estilos.container}>
 

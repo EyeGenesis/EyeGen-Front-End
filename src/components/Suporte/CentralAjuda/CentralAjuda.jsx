@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import estilos from './CentralAjuda.module.css';
-
-// 1. Importação do Ícone
 import { FaChevronDown } from 'react-icons/fa';
+import retanguloTransicao from "../../../assets/suporte-transition2.png";
 
-// 2. Dados para o Acordeão
 const faqItems = [
   {
     id: 1,
@@ -124,17 +122,14 @@ const faqItems = [
 ];
 
 const CentralAjuda = () => {
-  // 3. State ÚNICO para controlar o item principal aberto
   const [openItem, setOpenItem] = useState(null);
 
-  // 4. Função de Toggle
   const handleToggle = (id) => {
     setOpenItem(openItem === id ? null : id);
   };
 
   return (
     <section className={estilos.secaoAjuda}>
-      {/* --- 1. CABEÇALHO --- */}
       <div className={estilos.containerCabecalho}>
         <h2>Central de ajuda</h2>
         <p>
@@ -142,15 +137,12 @@ const CentralAjuda = () => {
           funcionalidades do EyeGen
         </p>
       </div>
-
-      {/* --- 2. LISTA DE ACORDEÃO --- */}
       <div className={estilos.containerAcordeao}>
         {faqItems.map((item) => {
           const isAberto = openItem === item.id;
           
           return (
             <div key={item.id} className={estilos.itemAcordeao}>
-              {/* Botão Clicável Principal */}
               <button 
                 onClick={() => handleToggle(item.id)} 
                 className={estilos.botaoAcordeao}
@@ -162,11 +154,9 @@ const CentralAjuda = () => {
                 />
               </button>
               
-              {/* Conteúdo (que abre e fecha) */}
               <div 
                 className={`${estilos.conteudoAcordeao} ${isAberto ? estilos.conteudoAberto : ''}`}
               >
-                {/* Lista de cards azuis (perguntas/respostas) */}
                 <div className={estilos.listaCardsAzuis}>
                   {item.subItems.map((subItem) => (
                     <div key={subItem.id} className={estilos.cardAzul}>
