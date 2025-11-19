@@ -1,0 +1,69 @@
+.heroPlanos {
+  min-height: 100vh;
+  background-image: url('../../../assets/hero-planos-image.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; 
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 10rem;
+  padding: 0 2rem;
+}
+
+.heroPlanos h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 2rem 0; 
+  max-width: 500px; 
+}
+
+.botaoPlanos {
+  background-color: #000;
+  color: #fff;
+  padding: 0.9rem 1.8rem; 
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  border: 2px solid #000;
+  transition: all 0.3s ease;
+}
+
+.botaoPlanos:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  transform: scale(1.03);
+}
+
+/* --- responsividade --- */
+@media (max-width: 768px) {
+  .heroPlanos {
+    min-height: 60vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .heroPlanos h1 {
+    font-size: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .botaoPlanos {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import style from './Header.module.css';
 import logo from '../../assets/img/nav/logo.ico';
 import perfilGeny from '../../assets/img/nav/perfil_geny.png';
+import { Link } from "react-router-dom";
+
 
 
 export default function Header() {
@@ -16,9 +18,10 @@ export default function Header() {
             <nav className={style.nav}>
                 <div className={style.nav_esquerda}>
                     <img className={style.logo} src={logo} alt="logo do eyegen, uma oculos junto com uma borboleta" />
-                    <a href="#"> Inicio </a>
-                    <a href="#"> Sobre nós</a>
-                    <a href="#"> Suporte </a>
+                    <Link to="/">Início</Link>
+                    <Link to="/sobre">Sobre nós</Link>
+    <               Link to="/suporte">Suporte</Link>
+
                     <a href="#" className={style.botao_geny}>
                         <div className={style.perfil_geny}></div>
                         <span>GENY</span>
@@ -28,10 +31,11 @@ export default function Header() {
                 <div className={style.nav_direita}>
                     <a href="#"> &#127760; PT-BR</a>
                     <a href="#"> &#128722; Comprar</a>
-                    <a href="#">Planos</a>
-                    <a href="#">Entrar</a>
+                    <Link to="/planos">Planos</Link>
+                    <Link to="/entrar">Entrar</Link>
+
                     <button className={style.cadastrar}>
-                        <a href="#">Cadastre-se</a>
+                        <Link to="/cadastro">Cadastre-se</Link>
                     </button>
                 </div>
 
