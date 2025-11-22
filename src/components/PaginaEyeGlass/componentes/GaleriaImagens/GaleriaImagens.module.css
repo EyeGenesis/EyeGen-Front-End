@@ -1,0 +1,116 @@
+
+.area-imagem {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagem-destaque {
+  width: 800px; 
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-destaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lista-miniaturas {
+  margin-top: 24px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.miniatura {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  overflow: hidden; 
+  transition: all 0.2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SELECIONADA */
+.miniatura-selecionada {
+  border-color: #000;
+}
+
+.miniatura:hover {
+  transform: scale(1.05);
+}
+
+/* responsividade */
+
+/* notebook 1200px */
+@media (max-width: 1200px) {
+  .imagem-destaque {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+/* tablet 1024px */
+@media (max-width: 1024px) {
+  .area-imagem {
+    margin-bottom: 30px;
+  }
+
+  .imagem-destaque {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* celualr moderno ≤ 600px */
+@media (max-width: 600px) {
+  .imagem-destaque {
+    width: 300px;
+    height: 300px;
+  }
+
+  .lista-miniaturas {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .miniatura {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* celular pequeno 430px */
+@media (max-width: 430px) {
+  .imagem-destaque {
+    width: 250px;
+    height: 250px;
+  }
+
+  .miniatura {
+    width: 48px;
+    height: 48px;
+  }
+
+  .lista-miniaturas {
+    gap: 10px;
+  }
+}

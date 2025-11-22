@@ -7,6 +7,7 @@ import Planos from "./components/Planos/Planos.jsx";
 import Suporte from "./components/Suporte/Suporte.jsx";
 import EspecProduto from "./components/EspecProduto/EspecProduto.jsx";
 import "./App.css";
+import Cadastro from "./components/Cadastro/Cadastro.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/suporte" element={<Suporte />} />
         <Route path="/comprar" element={<EspecProduto />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/cadastre-se" element={<Cadastro />} />
       </Routes>
 
       <Footer />
