@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from './LoginCard.module.css';
 import Imagem from './../../../assets/img/MulherCega.png';
+import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
 
 export default function LoginCard() {
 
@@ -131,6 +132,12 @@ export default function LoginCard() {
       {/* COLUNA DIREITA – IMAGEM */}
       <div className={styles.colDireita}>
           <img src={Imagem} className={styles.imagemDireita} alt="Imagem de uma pessoa cega" />
+      </div>
+
+      <div className={styles.botaoVoltar}>
+        <button onClick={() => window.history.back()}>
+          <img src={Seta_Voltar} alt="Voltar" />
+        </button>
       </div>
 
     </div>

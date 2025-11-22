@@ -4,6 +4,7 @@ import iconUser from './../../../assets/img/user.svg';
 import iconEmail from './../../../assets/img/email.svg';
 import iconLock from './../../../assets/img/cadeado.svg';
 import Imagem from './../../../assets/img/MulherCega2.png';
+import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
 
 export default function CadastroCard() {
 
@@ -21,7 +22,6 @@ export default function CadastroCard() {
   }
 
   function handleCadastro() {
-    // Resetar erro
     setErro("");
 
     if (!nome || !email || !senha || !confirmarSenha) {
@@ -138,6 +138,12 @@ export default function CadastroCard() {
         {/* COLUNA DIREITA */}
         <div className={styles.colDireita}>
             <img src={Imagem} className={styles.imagemDireita} alt="Imagem de uma pessoa cega" />
+        </div>
+
+        <div className={styles.botaoVoltar}>
+          <button onClick={() => window.history.back()}>
+            <img src={Seta_Voltar} alt="Voltar" />
+          </button>
         </div>
 
       </div>
