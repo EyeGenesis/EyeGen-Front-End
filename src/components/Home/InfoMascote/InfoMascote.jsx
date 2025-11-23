@@ -20,7 +20,7 @@ const InfoMascote = () => {
                 Descubra quem somos, o que nos motiva e o que visamos para o
                 futuro
               </p>
-              <Link to="/sobre">Saber mais</Link>
+              <Link to="/sobre-nos">Saber mais</Link>
             </article>
 
             {/* card 2: Planos */}

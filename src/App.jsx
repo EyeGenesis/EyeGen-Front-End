@@ -6,8 +6,9 @@ import Login from "./components/Login/Login.jsx";
 import Planos from "./components/Planos/Planos.jsx";
 import Suporte from "./components/Suporte/Suporte.jsx";
 import EspecProduto from "./components/EspecProduto/EspecProduto.jsx";
-import "./App.css";
 import Cadastro from "./components/Cadastro/Cadastro.jsx";
+import SobreNos from "./components/SobreNos/SobreNos.jsx";
+import "./App.css";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/sobre-nos" element={<SobreNos />} />
         <Route path="/planos" element={<Planos />} />
         <Route path="/suporte" element={<Suporte />} />
         <Route path="/comprar" element={<EspecProduto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastre-se" element={<Cadastro />} />
       </Routes>
-
       <Footer />
     </>
   );

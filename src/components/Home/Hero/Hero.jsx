@@ -20,7 +20,7 @@ export default function Hero() {
 
         <button
           className={style.botaoCliente}
-          onClick={() => navigate("/entrar")}
+          onClick={() => navigate("/login")}
         >
           Já sou cliente
         </button>

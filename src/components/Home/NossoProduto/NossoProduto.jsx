@@ -40,9 +40,9 @@ const NossoProduto = () => {
             <h3>Design Confortável</h3>
             <p>Texto descritivo sobre o design.</p>
             <footer>
-              <a href="#" className={estilos.linkSaberMais}>
+              <Link to="/comprar" className={estilos.linkSaberMais}>
                 Saber mais
-              </a>
+              </Link>
               <button
                 aria-label="Expandir"
                 className={estilos.botaoCirculo}
@@ -66,9 +66,9 @@ const NossoProduto = () => {
             <h3>Câmera de 1080p</h3>
             <p>Texto</p>
             <footer>
-              <a href="#" className={estilos.linkSaberMais}>
+              <Link to="/comprar" className={estilos.linkSaberMais}>
                 Saber mais
-              </a>
+              </Link>
               <button
                 aria-label="Expandir"
                 className={estilos.botaoCirculo}
@@ -92,9 +92,9 @@ const NossoProduto = () => {
             <h3>Bateria de Qualidade</h3>
             <p>Bateria com duração de 5 a 8 horas</p>
             <footer>
-              <a href="#" className={estilos.linkSaberMais}>
+              <Link to="/comprar" className={estilos.linkSaberMais}>
                 Saber mais
-              </a>
+              </Link>
               <button
                 aria-label="Expandir"
                 className={estilos.botaoCirculo}
@@ -115,9 +115,9 @@ const NossoProduto = () => {
             <h3>Material Resistente</h3>
             <p>Texto</p>
             <footer>
-              <a href="#" className={estilos.linkSaberMais}>
+              <Link to="/comprar" className={estilos.linkSaberMais}>
                 Saber mais
-              </a>
+              </Link>
               <button aria-label="Adicionar" className={estilos.botaoCirculo}>
                 <FaPlus size={16} />
               </button>
