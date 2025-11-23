@@ -21,7 +21,7 @@ export default function Header() {
             alt="logo do eyegen, uma oculos junto com uma borboleta"
           />
           <Link to="/">Início</Link>
-          <Link to="/sobre">Sobre nós</Link>
+          <Link to="/sobre-nos">Sobre nós</Link>
           <Link to="/suporte">Suporte</Link>
 
           <a href="#" className={style.botao_geny}>
