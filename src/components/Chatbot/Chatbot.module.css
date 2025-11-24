@@ -18,14 +18,14 @@
         justify-content: center;
         background: none;
         z-index: 1000;
-        
+
         & span {
             position: absolute;
         }
 
     }
 
-   
+
 
     & .popup {
         position: fixed;
@@ -180,6 +180,7 @@
                 align-items: center;
                 outline: 1px solid #78C7FF;
                 border-radius: 38px;
+                padding-right: 10px;
 
                 & input {
                     border: none;
@@ -190,30 +191,57 @@
                     padding: 0 17px;
                     font-size: 1.2rem;
                     font-family: "Exo 2", sans-serif;
-
-                }
-
-                & button {
-                    width: 50px;
-                    background: none;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    flex-shrink: 0;
-                    border-radius: 50%;
-
-                    & img {
-                        width: 50px;
-                        padding-right: 10px;
-                        margin-top: 3px;
-                        opacity: 0;
-                        transition: 0.3s ease;
+                    flex: 1;
                     }
-                }
 
-                & input:not(:placeholder-shown)~button img {
-                    opacity: 1;
-                    visibility: visible;
+                & input:not(:placeholder-shown)~div button img {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                & .botoesContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        & .botaoMic {
+                            width: 40px !important;
+                            height: 40px !important;
+                            font-size: 1.2rem;
+                            color: #7B42F6;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        & .botaoMic:hover {
+                            background-color: #f0f0f0 !important;
+                            transform: scale(1.1);
+                        }
+
+                        & .ouvindo {
+                            color: #ff0000 !important;
+                            animation: pulse 1.5s infinite;
+                        }
+
+                        & button {
+                            width: 50px;
+                            background: none;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            flex-shrink: 0;
+                            border-radius: 50%;
+
+                            & img {
+                                width: 50px;
+                                padding-right: 10px;
+                                margin-top: 3px;
+                                opacity: 0;
+                                transition: 0.3s ease;
+                            }
+                        }
                 }
             }
 
@@ -223,10 +251,24 @@
         }
     }
 
-     & .showChatbot {
+    & .showChatbot {
         opacity: 1;
         transform: scale(1);
         pointer-events: auto;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 

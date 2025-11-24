@@ -17,11 +17,37 @@ const Chatbot = () => {
         text: eyegenInfo
     }]);
     const [mostrarChatbot, setMostrarChatbot] = useState(false);
-
-
     const chatBodyRef = useRef();
 
-    const gerarRespostaBot = async (historico) => {
+    const falarTexto = (texto) => {
+        if (!('speechSynthesis' in window)) return;
+
+
+        window.speechSynthesis.cancel();
+
+
+        const textoLimpo = texto.replace(/[*#_]/g, '');
+
+        const utterance = new SpeechSynthesisUtterance(textoLimpo);
+        utterance.lang = 'pt-BR';
+        
+
+        const voices = window.speechSynthesis.getVoices();
+        const vozPreferida = voices.find(v => v.lang === 'pt-BR' && (v.name.includes('Google') || v.name.includes('Female'))) || voices[0];
+        if(vozPreferida) utterance.voice = vozPreferida;
+
+        utterance.rate = 1.1; 
+        utterance.pitch = 1.1; 
+
+        window.speechSynthesis.speak(utterance);
+    };
+
+
+    useEffect(() => {
+        window.speechSynthesis.getVoices();
+    }, []);
+
+    const gerarRespostaBot = async (historico, responderPorVoz = false) => {
 
         const updateHistorico = (text, isError = false) => {
 
@@ -44,8 +70,17 @@ const Chatbot = () => {
 
             const apiRespostaTexto = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
             updateHistorico(apiRespostaTexto);
+
+            if (responderPorVoz) {
+                falarTexto(apiRespostaTexto);
+            }
+
         } catch (error) {
+            const msgErro = "Desculpe, tive um problema técnico.";
             updateHistorico(error.message, true);
+            if (responderPorVoz) {
+                falarTexto(msgErro);
+            }
         }
     }
 
