@@ -64,7 +64,7 @@ const Chatbot = () => {
 
         try {
 
-            const response = await fetch(import.meta.env.VITE_API_URL, requestOptions);
+            const response = await fetch('/api/chat', requestOptions);
             const data = await response.json();
             if (!response.ok) throw new Error(data.error.message || "Algo deu Errado!");
 
@@ -77,7 +77,7 @@ const Chatbot = () => {
 
         } catch (error) {
             const msgErro = "Desculpe, tive um problema técnico.";
-            updateHistorico(error.message, true);
+            updateHistorico(msgErro, true);
             if (responderPorVoz) {
                 falarTexto(msgErro);
             }
