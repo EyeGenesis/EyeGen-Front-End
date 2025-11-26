@@ -1,0 +1,118 @@
+.secaoVisao {
+  background-color: #ffffff;
+  padding: 7rem 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.colunaTexto {
+  flex: 1;
+  max-width: 850px;
+}
+
+.colunaTexto h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.colunaTexto p {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+.colunaImagem {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.imageWrapper::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  background-image: radial-gradient(#000 20%, transparent 20%);
+  background-size: 18px 18px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* --- responsividade --- */
+@media (max-width: 900px) {
+  .secaoVisao {
+    padding: 4rem 1.5rem;
+  }
+
+  .colunaTexto p {
+    text-align: left;
+  }
+
+  .imageWrapper::before {
+    top: -20px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .colunaTexto {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .colunaImagem {
+    width: 100%;
+  }
+
+  .imageWrapper {
+    max-width: 80%;
+  }
+
+  .imageWrapper::before {
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageWrapper {
+    max-width: 100%;
+  }
+}

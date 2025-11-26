@@ -2,6 +2,7 @@ import React from "react";
 import estilos from "./Seguranca.module.css";
 import imagemHomem from "../../../assets/img/idoso-section.png";
 import imagemCrianca from "../../../assets/img/crianca-section.png";
+import { Link } from "react-router-dom";
 
 export default function Seguranca() {
   return (
@@ -25,9 +26,9 @@ export default function Seguranca() {
               locomover sem preocupar com obstáculos
             </p>
             <footer className={estilos.linksRodape}>
-              <a href="#">Funcionalidades do Produto</a>
-              <a href="#">Como o EYEGEN me mantém em segurança</a>
-              <a href="#">Ver mais relatos</a>
+              <Link to="/">Funcionalidades do Produto</Link>
+              <Link to="/">Como o EYEGEN me mantém em segurança</Link>
+              <Link to="/">Ver mais relatos</Link>
             </footer>
           </article>
           <article className={estilos.cartao}>

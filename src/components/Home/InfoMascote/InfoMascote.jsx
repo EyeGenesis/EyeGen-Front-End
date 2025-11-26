@@ -4,6 +4,7 @@ import { FaUsers, FaDollarSign, FaCogs, FaHeadset } from "react-icons/fa";
 import iconeBotaoGeny from "../../../assets/img/icone-geny-botao.png";
 import mascoteGeny from "../../../assets/img/mascote-geny.png";
 import retanguloTransicao from "../../../assets/img/rectangle-transition.png";
+import { Link } from "react-router-dom";
 
 const InfoMascote = () => {
   return (
@@ -19,7 +20,7 @@ const InfoMascote = () => {
                 Descubra quem somos, o que nos motiva e o que visamos para o
                 futuro
               </p>
-              <a href="#">Saber mais</a>
+              <Link to="/sobre-nos">Saber mais</Link>
             </article>
 
             {/* card 2: Planos */}
@@ -30,7 +31,7 @@ const InfoMascote = () => {
                 Descubra o plano ideal para suas necessidades. Escolha o que
                 melhor se adapta a você.
               </p>
-              <a href="#">Saber mais</a>
+              <Link to="/planos">Saber mais</Link>
             </article>
 
             {/* card 3: Suporte */}
@@ -41,7 +42,7 @@ const InfoMascote = () => {
                 Precisa de ajuda? Conte com a nossa equipe especializada para te
                 dar o suporte que você precisa.
               </p>
-              <a href="#">Saber mais</a>
+              <Link to="/suporte">Saber mais</Link>
             </article>
           </div>
         </div>
