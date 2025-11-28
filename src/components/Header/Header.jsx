@@ -3,10 +3,13 @@ import style from "./Header.module.css";
 import logo from "../../assets/img/nav/logo.ico";
 import perfilGeny from "../../assets/img/nav/perfil_geny.png";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../contexto/ContextoLingua";
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const [ouvindo, setOuvindo] = useState(false);
+
+  const { t, toggleLanguage, language } = useLanguage();
 
   const comandosDeVoz = [
     { 
@@ -111,9 +114,9 @@ export default function Header() {
             alt="logo do eyegen, uma oculos junto com uma borboleta"
           />
 
-          <Link to="/" id="btn-inicio-nav">Início</Link>
-          <Link to="/sobre-nos" id="btn-sobre-nav">Sobre nós</Link>
-          <Link to="/suporte" id="btn-suporte-nav">Suporte</Link>
+          <Link to="/" id="btn-inicio-nav">{t.header.inicio}</Link>
+          <Link to="/sobre-nos" id="btn-sobre-nav">{t.header.sobre}</Link>
+          <Link to="/suporte" id="btn-suporte-nav">{t.header.suporte}</Link>
 
           <a href="#" 
             className={style.botao_geny}
@@ -128,13 +131,15 @@ export default function Header() {
         </div>
 
         <div className={style.nav_direita}>
-          <a href="#"> &#127760; PT-BR</a>
-          <Link to="/comprar" id="btn-comprar-nav">Comprar</Link>
-          <Link to="/planos" id="btn-planos-nav">Planos</Link>
-          <Link to="/login" id="btn-entrar-nav">Entrar</Link>
+          <a href="#" onClick={(e) => { e.preventDefault(); toggleLanguage(); }}> 
+             &#127760; {language === 'pt' ? 'PT-BR' : 'EN-US'}
+          </a>
+          <Link to="/comprar" id="btn-comprar-nav">{t.header.comprar}</Link>
+          <Link to="/planos" id="btn-planos-nav">{t.header.planos}</Link>
+          <Link to="/login" id="btn-entrar-nav">{t.header.entrar}</Link>
 
           <button className={style.cadastrar}>
-            <Link to="/cadastre-se" id="btn-cadastrar-nav">Cadastre-se</Link>
+            <Link to="/cadastre-se" id="btn-cadastrar-nav">{t.header.cadastrar}</Link>
           </button>
         </div>
 
@@ -158,19 +163,19 @@ export default function Header() {
 
         <div className={style.menu_mobile_botoes_topo}>
           <button className={style.cadastrar_mobile}>
-            <Link to="/cadastre-se">Cadastre-se</Link>
+            <Link to="/cadastre-se">{t.header.cadastrar}</Link>
           </button>
-            <Link to="/login" className={style.entrar_mobile}>Entrar</Link>
+            <Link to="/login" className={style.entrar_mobile}>{t.header.entrar}</Link>
         </div>
 
         <div className={style.menu_mobile_links}>
-          <Link to="/">Início</Link>
-          <Link to="/sobre-nos">Sobre nós</Link>
-          <Link to="/comprar">Comprar</Link>
-          <Link to="/suporte">Suporte</Link>
-          <Link to="/planos">Planos</Link>
+          <Link to="/">{t.header.inicio}</Link>
+          <Link to="/sobre-nos">{t.header.sobre}</Link>
+          <Link to="/comprar">{t.header.comprar}</Link>
+          <Link to="/suporte">{t.header.suporte}</Link>
+          <Link to="/planos">{t.header.planos}</Link>
           
-          {/* Botão Geny Mobile também ativa a voz */}
+
           <a href="#" className={style.botao_geny_mobile} onClick={ativarComandoVoz}>
             <img src={perfilGeny} alt="Perfil Geny" />
             <span>{ouvindo ? "..." : "GENY"}</span>
