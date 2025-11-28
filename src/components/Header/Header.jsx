@@ -8,9 +8,98 @@ export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const [ouvindo, setOuvindo] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuAberto(!menuAberto);
+  const comandosDeVoz = [
+    { 
+      palavras: ["início", "home", "inicial", "começo"], 
+      id: "btn-inicio-nav", 
+      acao: "Início" 
+    },
+    { 
+      palavras: ["sobre", "quem somos", "empresa", "conhecer"], 
+      id: "btn-sobre-nav", 
+      acao: "Sobre Nós" 
+    },
+    { 
+      palavras: ["suporte", "ajuda", "contato", "falar com"], 
+      id: "btn-suporte-nav", 
+      acao: "Suporte" 
+    },
+    { 
+      palavras: ["comprar", "compra", "adquirir", "loja"], 
+      id: "btn-comprar-nav", 
+      acao: "Comprar" 
+    },
+    { 
+      palavras: ["planos", "preço", "valor", "assinatura"], 
+      id: "btn-planos-nav", 
+      acao: "Planos" 
+    },
+    { 
+      palavras: ["entrar", "login", "logar", "acesso"], 
+      id: "btn-entrar-nav", 
+      acao: "Login" 
+    },
+    { 
+      palavras: ["cadastre-se", "cadastro", "criar conta", "registrar"], 
+      id: "btn-cadastrar-nav", 
+      acao: "Cadastro" 
+    }
+  ];
+
+  const ativarComandoVoz = (e) => {
+    e.preventDefault();
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert("Seu navegador não suporta comandos de voz.");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'pt-BR';
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    recognition.onstart = () => {
+      setOuvindo(true);
+      console.log("Ouvindo...");
     };
+
+    recognition.onend = () => {
+      setOuvindo(false);
+      console.log("Parou de ouvir.");
+    };
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript.toLowerCase();
+      console.log("Você disse: ", transcript);
+
+      const comandoEncontrado = comandosDeVoz.find(cmd => 
+        cmd.palavras.some(palavra => transcript.includes(palavra))
+      );
+
+
+      if (comandoEncontrado) {
+        const elementoAlvo = document.getElementById(comandoEncontrado.id);
+        
+        if (elementoAlvo) {
+          console.log(`Geny entendeu: "${transcript}". Indo para ${comandoEncontrado.acao}!`);
+          elementoAlvo.click();
+        } else {
+          console.warn(`Elemento com ID ${comandoEncontrado.id} não encontrado na tela.`);
+        }
+      } else {
+        console.log(`Geny ouviu: "${transcript}", mas não reconheceu o comando.`);
+      }
+    };
+
+    recognition.start();
+  };
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
 
   return (
     <header>
@@ -21,24 +110,31 @@ export default function Header() {
             src={logo}
             alt="logo do eyegen, uma oculos junto com uma borboleta"
           />
-          <Link to="/">Início</Link>
-          <Link to="/sobre-nos">Sobre nós</Link>
-          <Link to="/suporte">Suporte</Link>
 
-          <a href="#" className={style.botao_geny}>
+          <Link to="/" id="btn-inicio-nav">Início</Link>
+          <Link to="/sobre-nos" id="btn-sobre-nav">Sobre nós</Link>
+          <Link to="/suporte" id="btn-suporte-nav">Suporte</Link>
+
+          <a href="#" 
+            className={style.botao_geny}
+            onClick={ativarComandoVoz}
+            style={{ border: ouvindo ? '2px solid #ff0000' : '1px solid #fff' }}
+            title="Clique para falar com a Geny"
+          >
             <div className={style.perfil_geny}></div>
-            <span>GENY</span>
+
+            <span>{ouvindo ? "OUVINDO..." : "GENY"}</span>
           </a>
         </div>
 
         <div className={style.nav_direita}>
           <a href="#"> &#127760; PT-BR</a>
-          <Link to="/comprar">Comprar</Link>
-          <Link to="/planos">Planos</Link>
-          <Link to="/login">Entrar</Link>
+          <Link to="/comprar" id="btn-comprar-nav">Comprar</Link>
+          <Link to="/planos" id="btn-planos-nav">Planos</Link>
+          <Link to="/login" id="btn-entrar-nav">Entrar</Link>
 
           <button className={style.cadastrar}>
-            <Link to="/cadastre-se">Cadastre-se</Link>
+            <Link to="/cadastre-se" id="btn-cadastrar-nav">Cadastre-se</Link>
           </button>
         </div>
 
@@ -46,6 +142,7 @@ export default function Header() {
           &#9776;
         </button>
       </nav>
+
 
       <div
         className={`${style.menu_mobile_overlay} ${
@@ -72,9 +169,11 @@ export default function Header() {
           <Link to="/comprar">Comprar</Link>
           <Link to="/suporte">Suporte</Link>
           <Link to="/planos">Planos</Link>
-          <a href="#" className={style.botao_geny_mobile}>
+          
+          {/* Botão Geny Mobile também ativa a voz */}
+          <a href="#" className={style.botao_geny_mobile} onClick={ativarComandoVoz}>
             <img src={perfilGeny} alt="Perfil Geny" />
-            <span>GENY</span>
+            <span>{ouvindo ? "..." : "GENY"}</span>
           </a>
         </div>
       </div>
