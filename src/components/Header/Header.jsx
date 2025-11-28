@@ -170,7 +170,7 @@ export default function Header() {
           <Link to="/suporte">Suporte</Link>
           <Link to="/planos">Planos</Link>
           
-          {/* Botão Geny Mobile também ativa a voz */}
+
           <a href="#" className={style.botao_geny_mobile} onClick={ativarComandoVoz}>
             <img src={perfilGeny} alt="Perfil Geny" />
             <span>{ouvindo ? "..." : "GENY"}</span>
