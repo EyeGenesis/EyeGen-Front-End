@@ -53,7 +53,7 @@
 .fundoRosa {
   position: absolute;
   bottom: -15px;
-  /left: -15px;
+  left: -15px;
   width: 90%;
   height: 90%;
   background-color: #e9406a;
