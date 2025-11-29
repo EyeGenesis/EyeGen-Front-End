@@ -8,6 +8,10 @@ export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const [ouvindo, setOuvindo] = useState(false);
 
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  }
+
   const comandosDeVoz = [
     { 
       palavras: ["início", "home", "inicial", "começo"], 
@@ -86,6 +90,7 @@ export default function Header() {
         if (elementoAlvo) {
           console.log(`Geny entendeu: "${transcript}". Indo para ${comandoEncontrado.acao}!`);
           elementoAlvo.click();
+          fecharMenu();
         } else {
           console.warn(`Elemento com ID ${comandoEncontrado.id} não encontrado na tela.`);
         }
@@ -158,17 +163,17 @@ export default function Header() {
 
         <div className={style.menu_mobile_botoes_topo}>
           <button className={style.cadastrar_mobile}>
-            <Link to="/cadastre-se">Cadastre-se</Link>
+            <Link to="/cadastre-se" onClick={fecharMenu}>Cadastre-se</Link>
           </button>
-            <Link to="/login" className={style.entrar_mobile}>Entrar</Link>
+            <Link to="/login" className={style.entrar_mobile} onClick={fecharMenu}>Entrar</Link>
         </div>
 
         <div className={style.menu_mobile_links}>
-          <Link to="/">Início</Link>
-          <Link to="/sobre-nos">Sobre nós</Link>
-          <Link to="/comprar">Comprar</Link>
-          <Link to="/suporte">Suporte</Link>
-          <Link to="/planos">Planos</Link>
+          <Link to="/" onClick={fecharMenu}>Início</Link>
+          <Link to="/sobre-nos" onClick={fecharMenu}>Sobre nós</Link>
+          <Link to="/comprar" onClick={fecharMenu}>Comprar</Link>
+          <Link to="/suporte" onClick={fecharMenu}>Suporte</Link>
+          <Link to="/planos" onClick={fecharMenu}>Planos</Link>
           
 
           <a href="#" className={style.botao_geny_mobile} onClick={ativarComandoVoz}>
