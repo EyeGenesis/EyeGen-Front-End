@@ -4,6 +4,7 @@
   font-family: "Roboto", sans-serif;
   color: #000;
   height: 80vh;
+  overflow: hidden;
 }
 
 .container {
@@ -53,7 +54,7 @@
 .fundoRosa {
   position: absolute;
   bottom: -15px;
-  /left: -15px;
+  left: -15px;
   width: 90%;
   height: 90%;
   background-color: #e9406a;
