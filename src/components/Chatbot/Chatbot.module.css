@@ -29,6 +29,8 @@
 
     & .popup {
         position: fixed;
+        display: flex;
+        flex-direction: column;
         opacity: 0;
         pointer-events: none;
         bottom: 90px;
