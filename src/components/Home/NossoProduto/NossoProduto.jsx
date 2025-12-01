@@ -12,15 +12,18 @@ import cameraProduto from "../../../assets/img/camera-produto.mp4";
 import bateriaProduto from "../../../assets/img/bateria-produto.mp4";
 import materialProduto from "../../../assets/img/material-produto.png";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const NossoProduto = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.secaoProduto}>
       <div className={estilos.containerTitulo}>
-        <h2>Sobre Nosso Produto</h2>
-        <p>Tranforme seu dia a dia com autonomia e segurança</p>
+        <h2>{t.home.produto.titulo}</h2>
+        <p>{t.home.produto.subtitulo}</p>
         <Link to="/comprar" className={estilos.botaoComprar}>
-          Comprar Agora <FaArrowRight size={14} />
+          {t.home.produto.botao} <FaArrowRight size={14} />
         </Link>
       </div>
       <div className={estilos.gradeCards}>
@@ -37,11 +40,11 @@ const NossoProduto = () => {
           </div>
           <div className={estilos.conteudoCartao}>
             <FaShieldAlt className={estilos.icone} size={24} />
-            <h3>Design Confortável</h3>
-            <p>Texto descritivo sobre o design.</p>
+            <h3>{t.home.produto.cards.design.titulo}</h3>
+            <p>{t.home.produto.cards.design.texto}</p>
             <footer>
               <Link to="/comprar" className={estilos.linkSaberMais}>
-                Saber mais
+                {t.home.produto.cards.design.link}
               </Link>
               <button
                 aria-label="Expandir"
@@ -63,11 +66,11 @@ const NossoProduto = () => {
           </div>
           <div className={estilos.conteudoCartao}>
             <FaCamera className={estilos.icone} size={24} />
-            <h3>Câmera de 1080p</h3>
-            <p>Texto</p>
+            <h3>{t.home.produto.cards.camera.titulo}</h3>
+            <p>{t.home.produto.cards.camera.texto}</p>
             <footer>
               <Link to="/comprar" className={estilos.linkSaberMais}>
-                Saber mais
+                {t.home.produto.cards.camera.link}
               </Link>
               <button
                 aria-label="Expandir"
@@ -89,11 +92,11 @@ const NossoProduto = () => {
           </div>
           <div className={estilos.conteudoCartao}>
             <FaBatteryHalf className={estilos.icone} size={24} />
-            <h3>Bateria de Qualidade</h3>
-            <p>Bateria com duração de 5 a 8 horas</p>
+            <h3>{t.home.produto.cards.bateria.titulo}</h3>
+            <p>{t.home.produto.cards.bateria.texto}</p>
             <footer>
               <Link to="/comprar" className={estilos.linkSaberMais}>
-                Saber mais
+                {t.home.produto.cards.bateria.link}
               </Link>
               <button
                 aria-label="Expandir"
@@ -112,11 +115,11 @@ const NossoProduto = () => {
           </div>
           <div className={estilos.conteudoCartao}>
             <FaShieldAlt className={estilos.icone} size={24} />
-            <h3>Material Resistente</h3>
-            <p>Texto</p>
+            <h3>{t.home.produto.cards.material.titulo}</h3>
+            <p>{t.home.produto.cards.material.texto}</p>
             <footer>
               <Link to="/comprar" className={estilos.linkSaberMais}>
-                Saber mais
+                {t.home.produto.cards.material.link}
               </Link>
               <button aria-label="Adicionar" className={estilos.botaoCirculo}>
                 <FaPlus size={16} />
