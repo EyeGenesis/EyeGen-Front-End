@@ -6,7 +6,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 
 const TabelaPrecos = () => {
   return (
-    <section className={estilos.secaoPrecos}>
+    <section className={estilos.secaoPrecos} id='secaoPrecos'>
 
       <div className={estilos.containerCabecalho}>
         <h2>Inicie uma jornada de novas possibilidades</h2>
@@ -17,11 +17,6 @@ const TabelaPrecos = () => {
       
         <div className={estilos.togglePlanos}>
           <span>Planos Mensais</span>
-          <label className={estilos.switch}>
-            <input type="checkbox" /> 
-            <span className={estilos.slider}></span>
-          </label>
-          <span>Planos Anuais</span>
         </div>
       </div>
 
@@ -34,12 +29,12 @@ const TabelaPrecos = () => {
             <p className={estilos.descricaoPlano}>
               Recursos avançados com suporte 24/7, gravações e nuvem.
             </p>
-            <div className={estilos.preco}>R$300,00</div>
+            <div className={estilos.preco}>R$30,00</div>
             <ul className={estilos.listaFuncionalidades}>
               <li><FaCheckCircle className={estilos.checkRosa} /> Inclui todas funcionalidades do Origin</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Armazenamento em nuvem</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Detecção de locais desconhecidos</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Captura de fotos e gravações de vídeos</li>
+              <li><FaCheckCircle className={estilos.checkRosa} /> Reconhecimento de placas e cédulas</li>
+              <li><FaCheckCircle className={estilos.checkRosa} /> Leitura de texto</li>
+              <li><FaCheckCircle className={estilos.checkRosa} /> Primeira manutenção grátis</li>
             </ul>
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoInfinity}`}>
               Atualize para Infinity
@@ -47,7 +42,7 @@ const TabelaPrecos = () => {
           </div>
         </article>
 
-        <article className={estilos.cartaoDestacado}>
+        <article className={estilos.cartaoDestacado} >
           
           <div className={estilos.headerDestacado}>
             Recomendado <IoSparkles size={16} />
@@ -58,14 +53,13 @@ const TabelaPrecos = () => {
             <p className={estilos.descricaoPlano}>
               Segurança com histórico da localização e rede de apoio familiar.
             </p>
-            <div className={estilos.preco}>R$600,00</div>
+            <div className={estilos.preco}>R$60,00</div>
             
             <ul className={estilos.listaFuncionalidades}>
-              <li><IoCheckmarkCircleOutline className={estilos.checkRoxo} /> Inclui todas funcionalidades do Origin + Infinity</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkRoxo} /> Modo Acompanhamento</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkRoxo} /> Acesso a todas funcionalidades pelo app</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkRoxo} /> Histórico de rotas compartilhadas</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkRoxo} /> Rede de apoio expandida</li>
+              <li><FaCheckCircle className={estilos.checkRoxo} /> Inclui todas funcionalidades do Origin + Infinity</li>
+              <li><FaCheckCircle className={estilos.checkRoxo} /> Garantia Estendida</li>
+              <li><FaCheckCircle className={estilos.checkRoxo} /> Suporte Prioritário</li>
+              <li><FaCheckCircle className={estilos.checkRoxo} /> Inclusão do sistema Navis para rotas mais seguras</li>
             </ul>
             
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoGuardian}`}>
@@ -83,10 +77,10 @@ const TabelaPrecos = () => {
             </p>
             <div className={estilos.preco}>Gratuito</div>
             <ul className={estilos.listaFuncionalidades}>
-              <li><FaCheckCircle className={estilos.checkVerdeAgua} /> Acesso a ferramentas de IA essenciais.</li>
-              <li><FaCheckCircle className={estilos.checkVerdeAgua} /> Identificação de objetos/obstáculos</li>
-              <li><FaCheckCircle className={estilos.checkVerdeAgua} /> Localização em tempo real</li>
-              <li><FaCheckCircle className={estilos.checkVerdeAgua} /> Alertas e Sensores de Perigo</li>
+              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Acesso a ferramentas de IA essenciais.</li>
+              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Identificação de objetos/obstáculos</li>
+              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Localização em tempo real</li>
+              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Alertas e Sensores de Perigo</li>
             </ul>
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoOrigin}`}>
               Inicie sua jornada

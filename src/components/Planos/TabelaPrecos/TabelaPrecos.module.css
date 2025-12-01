@@ -1,7 +1,7 @@
 .secaoPrecos {
   background-color: #f7f8fc;
   padding: 5rem 2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .containerCabecalho {
@@ -30,8 +30,15 @@
   align-items: center;
   gap: 0.75rem;
   font-weight: 500;
-  color: #777; 
-  background-color: #e0e0e0;
+  color: #ffffff;
+  background: linear-gradient(
+    317deg,
+    #e0005a 24.98%,
+    #ff4d6d 48.19%,
+    #7b42f6 80.93%
+  );
+  cursor: pointer;
+  box-shadow: 4px 5px 15px #4b4b4bb4;
   border-radius: 50px;
   padding: 0.25rem;
   width: fit-content;
@@ -47,7 +54,7 @@
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 28px; 
+  height: 28px;
 }
 .switch input {
   opacity: 0;
@@ -62,7 +69,7 @@
   right: 0;
   bottom: 0;
   background-color: transparent;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -70,18 +77,18 @@
   position: absolute;
   content: "";
   height: 20px;
-  width: 20px; 
+  width: 20px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .switch input:checked + .slider:before {
   transform: translateX(22px);
-  background: linear-gradient(to right, #9b59b6, #e74c3c); 
+  background: linear-gradient(to right, #9b59b6, #e74c3c);
 }
 
 .containerCards {
@@ -135,41 +142,41 @@
 }
 .listaFuncionalidades li {
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: 0.75rem;
   color: #333;
   margin-bottom: 0.75rem;
-  font-size: 0.95rem; 
+  font-size: 0.95rem;
 }
 
 .checkRosa {
-  color: #f27f65; 
+  color: #e0674c;
   flex-shrink: 0;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 .checkRoxo {
-  color: #8A2BE2; 
+  color: #8305fa;
   flex-shrink: 0;
-  font-size: 1.2em; 
+  font-size: 1.25em;
 }
 
 .checkVerdeAgua {
-  color: #1abc9c;
+  color: #2fb99e;
   flex-shrink: 0;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 
 .cartaoDestacado {
   position: relative;
-  background: #ffffff; 
-  border-radius: 20px; 
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(18, 67, 172, 0.5);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .headerDestacado {
-  background: linear-gradient(to right, #8A2BE2, #4E54C8);
+  background: linear-gradient(to right, #641ba8, #2a33e7);
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -186,7 +193,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .cartaoDestacado .cartaoInterno {
@@ -203,7 +210,7 @@
   color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -213,17 +220,17 @@
   font-size: 0.7rem;
 }
 .cartaoDestacado .preco {
-  color: #000;   
+  color: #000;
 }
 .badgeGratuito {
   position: absolute;
   top: 2rem;
   right: 2rem;
   background-color: #ecf0f1;
-  color: #34495e; 
+  color: #327b85;
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   font-weight: 700;
 }
 .botaoPlano {
@@ -238,7 +245,7 @@
   font-weight: 700;
   font-size: 1rem;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; 
+  width: 100%;
 }
 .botaoPlano:hover {
   transform: scale(1.03);
@@ -249,7 +256,7 @@
   color: #fff;
 }
 .botaoGuardian {
-  background: linear-gradient(to right, #8A2BE2, #4E54C8);
+  background: linear-gradient(to right, #6c02cf, #2a33e7);
   color: #fff;
 }
 .botaoOrigin {
@@ -257,9 +264,8 @@
   color: #fff;
 }
 .botaoOrigin svg {
-  display: none; 
+  display: none;
 }
-
 
 /* --- responsividade --- */
 @media (max-width: 992px) {

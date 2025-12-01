@@ -10,7 +10,7 @@ const HeroPlanos = () => {
           <br />
           junto com você
         </h1>
-        <a href="#" className={estilos.botaoPlanos}>
+        <a href="#secaoPrecos" className={estilos.botaoPlanos}>
           Conheça Nossos Planos
         </a>
       </div>
