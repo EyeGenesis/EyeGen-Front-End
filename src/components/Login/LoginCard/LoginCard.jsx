@@ -2,94 +2,100 @@ import { useState } from "react";
 import styles from './LoginCard.module.css';
 import Imagem from './../../../assets/img/MulherCega.png';
 import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
+import GoogleIcon from './../../../assets/img/google.svg';
+import AppleIcon from './../../../assets/img/apple.svg';
+import FacebookIcon from './../../../assets/img/facebook.svg';
+import UserIcon from './../../../assets/img/user.svg';
+import CadeadoIcon from './../../../assets/img/cadeado.svg';
+import LogoEyegen from './../../../assets/img/eyegen.svg';
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 export default function LoginCard() {
+  const { t } = useLanguage(); 
 
   const [emailUser, setEmailUser] = useState("");
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
 
   function handleLogin() {
-    setErro(""); // limpa erro ao tentar
+    setErro(""); 
 
     if (!emailUser.trim()) {
-      setErro("Por favor, insira seu usuário ou e-mail.");
+      setErro(t.login.mensagens.erroUsuario);
       return;
     }
 
     if (!senha.trim()) {
-      setErro("Por favor, insira sua senha.");
+      setErro(t.login.mensagens.erroSenha);
       return;
     }
 
     if (senha.length < 6) {
-      setErro("A senha precisa ter ao menos 6 caracteres.");
+      setErro(t.login.mensagens.erroTamanhoSenha);
       return;
     }
 
-    // Se passou por tudo → login válido
-    alert("Login realizado com sucesso! (funcionamento simulado)");
+
+    alert(t.login.mensagens.sucesso);
   }
 
   return (
     <div className={styles.card}>
 
-      {/* COLUNA ESQUERDA */}
+
       <div className={styles.colEsquerda}>
 
-        {/* LOGO */}
         <div className={styles.logoArea}>
           <img
-            src="./../../../src/assets/img/eyegen.svg"
+            src={LogoEyegen}
             alt="Logo Eyegen"
             className={styles.logo}
           />
           <span className={styles.logoTexto}>EYEGEN</span>
         </div>
 
-        {/* TÍTULO */}
+
         <div className={styles.bemVindo}>
-          <h2>Seja-bem vindo(a) de volta!</h2>
+          <h2>{t.login.titulo}</h2>
         </div>
 
-        {/* ABAS */}
+
         <div className={styles.tabs}>
-          <button className={`${styles.tab} ${styles.active}`}>Entrar</button>
-          <button className={styles.tab}>Cadastre-se</button>
+          <button className={`${styles.tab} ${styles.active}`}>{t.login.tabs.entrar}</button>
+          <button className={styles.tab}>{t.login.tabs.cadastrar}</button>
         </div>
 
-        {/* INPUTS */}
+
         <div className={styles.inputsArea}>
 
-          {/* EMAIL/USUÁRIO */}
           <div className={styles.inputGroup}>
             <input
               type="text"
-              placeholder="Insira seu usuário ou e-mail"
+              placeholder={t.login.inputs.usuarioPlaceholder}
               className={styles.input}
               value={emailUser}
               onChange={(e) => setEmailUser(e.target.value)}
             />
             <span className={styles.icon}>
-              <img src="./../../../src/assets/img/user.svg" alt="" />
+              <img src={UserIcon} alt="" />
             </span>
           </div>
 
-          {/* SENHA */}
+
           <div className={styles.inputGroup}>
             <input
               type="password"
-              placeholder="Insira sua senha"
+              placeholder={t.login.inputs.senhaPlaceholder}
               className={styles.input}
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
             />
             <span className={styles.icon}>
-              <img src="./../../../src/assets/img/cadeado.svg" alt="" />
+              <img src={CadeadoIcon} alt="" />
             </span>
           </div>
 
-          {/* MENSAGEM DE ERRO */}
+
           {erro && (
             <p style={{ color: "red", fontSize: "14px", marginTop: "-10px" }}>
               {erro}
@@ -98,38 +104,38 @@ export default function LoginCard() {
 
         </div>
 
-        {/* BOTÃO ENTRAR */}
         <button
           className={styles.botaoEntrar}
           onClick={handleLogin}
         >
-          Entrar
+          {t.login.botao}
         </button>
 
-        {/* DIVISOR */}
+
         <div className={styles.divisor}>
-          <span><strong>Entrar</strong> com outros</span>
+          {/* Para manter o estilo bold em "Entrar", usamos dangerouslySetInnerHTML ou separamos no JSON. 
+              Aqui vou simplificar exibindo o texto traduzido. 
+              Se quiser manter o "Entrar" em negrito, você pode quebrar a string no JSON. */}
+          <span>{t.login.divisor}</span>
         </div>
 
-        {/* BOTÕES SOCIAIS */}
         <button className={styles.botaoSocial}>
-          <img src="./../../../src/assets/img/google.svg" alt="Google" />
-          <span>Entrar com <strong>Google</strong></span>
+          <img src={GoogleIcon} alt="Google" />
+          <span>{t.login.social.google}</span>
         </button>
 
         <button className={`${styles.botaoSocial} ${styles.apple}`}>
-          <img src="./../../../src/assets/img/apple.svg" alt="Apple" />
-          <span>Entrar com <strong>Apple</strong></span>
+          <img src={AppleIcon} alt="Apple" />
+          <span>{t.login.social.apple}</span>
         </button>
 
         <button className={`${styles.botaoSocial} ${styles.facebook}`}>
-          <img src="./../../../src/assets/img/facebook.svg" alt="Facebook" />
-          <span>Entrar com <strong>Facebook</strong></span>
+          <img src={FacebookIcon} alt="Facebook" />
+          <span>{t.login.social.facebook}</span>
         </button>
 
       </div>
 
-      {/* COLUNA DIREITA – IMAGEM */}
       <div className={styles.colDireita}>
           <img src={Imagem} className={styles.imagemDireita} alt="Imagem de uma pessoa cega" />
       </div>

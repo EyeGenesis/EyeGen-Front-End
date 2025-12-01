@@ -365,6 +365,51 @@ export const translations = {
           }
         }
       }
+    },
+    login: {
+      titulo: "Seja bem-vindo(a) de volta!",
+      tabs: {
+        entrar: "Entrar",
+        cadastrar: "Cadastre-se"
+      },
+      inputs: {
+        usuarioPlaceholder: "Insira seu usuário ou e-mail",
+        senhaPlaceholder: "Insira sua senha"
+      },
+      botao: "Entrar",
+      divisor: "Entrar com outros",
+      social: {
+        google: "Entrar com Google",
+        apple: "Entrar com Apple",
+        facebook: "Entrar com Facebook"
+      },
+      mensagens: {
+        erroUsuario: "Por favor, insira seu usuário ou e-mail.",
+        erroSenha: "Por favor, insira sua senha.",
+        erroTamanhoSenha: "A senha precisa ter ao menos 6 caracteres.",
+        sucesso: "Login realizado com sucesso! (funcionamento simulado)"
+      }
+    },
+    cadastro: {
+      subtexto: "A tecnologia a favor da sua liberdade",
+      linkComecaAqui: "começa aqui.",
+      tabs: {
+        entrar: "Entrar",
+        cadastrar: "Cadastre-se"
+      },
+      inputs: {
+        nomePlaceholder: "Insira seu nome",
+        emailPlaceholder: "Insira seu e-mail",
+        senhaPlaceholder: "Insira sua senha",
+        confirmarSenhaPlaceholder: "Confirme sua senha"
+      },
+      botao: "Cadastrar-se",
+      mensagens: {
+        erroCampos: "Por favor, preencha todos os campos.",
+        erroEmail: "Insira um e-mail válido.",
+        erroSenha: "As senhas não coincidem.",
+        sucesso: "Cadastro realizado com sucesso!"
+      }
     }
   },
   en: {
@@ -730,6 +775,51 @@ export const translations = {
             ]
           }
         }
+      }
+    },
+    login: {
+      titulo: "Welcome back!",
+      tabs: {
+        entrar: "Login",
+        cadastrar: "Sign Up"
+      },
+      inputs: {
+        usuarioPlaceholder: "Enter your username or email",
+        senhaPlaceholder: "Enter your password"
+      },
+      botao: "Login",
+      divisor: "Login with others",
+      social: {
+        google: "Login with Google",
+        apple: "Login with Apple",
+        facebook: "Login with Facebook"
+      },
+      mensagens: {
+        erroUsuario: "Please enter your username or email.",
+        erroSenha: "Please enter your password.",
+        erroTamanhoSenha: "Password must be at least 6 characters.",
+        sucesso: "Login successful! (simulated function)"
+      }
+    },
+    cadastro: {
+      subtexto: "Technology in favor of your freedom",
+      linkComecaAqui: "starts here.",
+      tabs: {
+        entrar: "Login",
+        cadastrar: "Sign Up"
+      },
+      inputs: {
+        nomePlaceholder: "Enter your name",
+        emailPlaceholder: "Enter your email",
+        senhaPlaceholder: "Enter your password",
+        confirmarSenhaPlaceholder: "Confirm your password"
+      },
+      botao: "Sign Up",
+      mensagens: {
+        erroCampos: "Please fill in all fields.",
+        erroEmail: "Enter a valid email.",
+        erroSenha: "Passwords do not match.",
+        sucesso: "Registration successful!"
       }
     }
   }

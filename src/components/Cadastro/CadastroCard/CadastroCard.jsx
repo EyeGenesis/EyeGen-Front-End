@@ -1,3 +1,4 @@
+// src/components/Cadastro/CadastroCard/CadastroCard.jsx
 import { useState } from 'react';
 import styles from './CadastroCard.module.css';
 import iconUser from './../../../assets/img/user.svg';
@@ -5,16 +6,17 @@ import iconEmail from './../../../assets/img/email.svg';
 import iconLock from './../../../assets/img/cadeado.svg';
 import Imagem from './../../../assets/img/MulherCega2.png';
 import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
+import { useLanguage } from "../../../contexto/ContextoLingua"; 
 
 export default function CadastroCard() {
+  const { t } = useLanguage(); 
 
-  // Estados dos inputs
+
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
 
-  // Estado de erro
   const [erro, setErro] = useState("");
 
   function validarEmail(email) {
@@ -25,117 +27,116 @@ export default function CadastroCard() {
     setErro("");
 
     if (!nome || !email || !senha || !confirmarSenha) {
-      setErro("Por favor, preencha todos os campos.");
+      setErro(t.cadastro.mensagens.erroCampos);
       return;
     }
 
     if (!validarEmail(email)) {
-      setErro("Insira um e-mail válido.");
+      setErro(t.cadastro.mensagens.erroEmail);
       return;
     }
 
     if (senha !== confirmarSenha) {
-      setErro("As senhas não coincidem.");
+      setErro(t.cadastro.mensagens.erroSenha);
       return;
     }
 
-    alert("Cadastro realizado com sucesso!");
+    alert(t.cadastro.mensagens.sucesso);
   }
 
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.card}>
 
-        {/* COLUNA ESQUERDA */}
+
         <div className={styles.colEsquerda}>
 
-          {/* LOGO */}
+
           <div className={styles.logoArea}>
-            <img src="./../../../src/assets/img/eyegen2.svg" className={styles.logo} />
+            <img src="./../../../src/assets/img/eyegen2.svg" className={styles.logo} alt="Logo EyeGen" />
             <span className={styles.logoTexto}>EYEGEN</span>
           </div>
 
-          {/* FRASE */}
+
           <p className={styles.subTexto}>
-            A tecnologia a favor da sua liberdade <a href="#">começa aqui.</a>
+            {t.cadastro.subtexto} <a href="#">{t.cadastro.linkComecaAqui}</a>
           </p>
 
-          {/* ABAS */}
+
           <div className={styles.tabs}>
-            <button className={styles.tab}>Entrar</button>
-            <button className={`${styles.tab} ${styles.active}`}>Cadastre-se</button>
+            <button className={styles.tab}>{t.cadastro.tabs.entrar}</button>
+            <button className={`${styles.tab} ${styles.active}`}>{t.cadastro.tabs.cadastrar}</button>
           </div>
 
-          {/* INPUTS */}
+
           <div className={styles.inputsArea}>
 
-            {/* Nome */}
+
             <div className={styles.inputGroup}>
               <input
                 type="text"
-                placeholder="Insira seu nome"
+                placeholder={t.cadastro.inputs.nomePlaceholder}
                 className={styles.input}
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
               />
               <div className={styles.icon}>
-                <img src={iconUser} />
+                <img src={iconUser} alt="" />
               </div>
             </div>
 
-            {/* Email */}
+
             <div className={styles.inputGroup}>
               <input
                 type="email"
-                placeholder="Insira seu e-mail"
+                placeholder={t.cadastro.inputs.emailPlaceholder}
                 className={styles.input}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <div className={styles.icon}>
-                <img src={iconEmail} />
+                <img src={iconEmail} alt="" />
               </div>
             </div>
 
-            {/* Senha */}
+
             <div className={styles.inputGroup}>
               <input
                 type="password"
-                placeholder="Insira sua senha"
+                placeholder={t.cadastro.inputs.senhaPlaceholder}
                 className={styles.input}
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
               />
               <div className={styles.icon}>
-                <img src={iconLock} />
+                <img src={iconLock} alt="" />
               </div>
             </div>
 
-            {/* Confirmar senha */}
+
             <div className={styles.inputGroup}>
               <input
                 type="password"
-                placeholder="Confirme sua senha"
+                placeholder={t.cadastro.inputs.confirmarSenhaPlaceholder}
                 className={styles.input}
                 value={confirmarSenha}
                 onChange={(e) => setConfirmarSenha(e.target.value)}
               />
               <div className={styles.icon}>
-                <img src={iconLock} />
+                <img src={iconLock} alt="" />
               </div>
             </div>
           </div>
 
-          {/* MENSAGEM DE ERRO */}
+
           {erro && <p className={styles.erro}>{erro}</p>}
 
-          {/* BOTÃO CADASTRAR */}
+
           <button className={styles.botaoCadastro} onClick={handleCadastro}>
-            Cadastrar-se
+            {t.cadastro.botao}
           </button>
         </div>
 
-        {/* COLUNA DIREITA */}
         <div className={styles.colDireita}>
             <img src={Imagem} className={styles.imagemDireita} alt="Imagem de uma pessoa cega" />
         </div>
