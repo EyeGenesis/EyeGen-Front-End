@@ -6,6 +6,7 @@ import iconEmail from './../../../assets/img/email.svg';
 import iconLock from './../../../assets/img/cadeado.svg';
 import Imagem from './../../../assets/img/MulherCega2.png';
 import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
+import LogoEyegen from './../../../assets/img/eyegen.svg';
 import { useLanguage } from "../../../contexto/ContextoLingua"; 
 
 export default function CadastroCard() {
@@ -53,7 +54,7 @@ export default function CadastroCard() {
 
 
           <div className={styles.logoArea}>
-            <img src="./../../../src/assets/img/eyegen2.svg" className={styles.logo} alt="Logo EyeGen" />
+            <img src={LogoEyegen} className={styles.logo} alt="Logo EyeGen" />
             <span className={styles.logoTexto}>EYEGEN</span>
           </div>
 
