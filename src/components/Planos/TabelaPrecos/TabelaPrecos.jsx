@@ -1,89 +1,96 @@
 import React from 'react';
 import estilos from './TabelaPrecos.module.css';
-import { FaCheckCircle, FaArrowRight } from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 import { IoCheckmarkCircleOutline, IoSparkles } from 'react-icons/io5';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const TabelaPrecos = () => {
+  const { t } = useLanguage();
+  const { tabela } = t.planos;
+
   return (
     <section className={estilos.secaoPrecos} id='secaoPrecos'>
 
       <div className={estilos.containerCabecalho}>
-        <h2>Inicie uma jornada de novas possibilidades</h2>
-        <p>
-          Nossos planos foram desenhados para proporcionar a você
-          funcionalidades completas de locomoção e tarefas diárias.
-        </p>
+        <h2>{tabela.titulo}</h2>
+        <p>{tabela.subtitulo}</p>
       
         <div className={estilos.togglePlanos}>
-          <span>Planos Mensais</span>
+          <span>{tabela.toggle}</span>
         </div>
       </div>
 
-      {/* GRADE DE CARDS */}
+
       <div className={estilos.containerCards}>
         
+
         <article className={estilos.cartao}>
           <div className={estilos.cartaoInterno}>
-            <span className={estilos.tipoPlano}>Infinity</span>
+            <span className={estilos.tipoPlano}>{tabela.cards.infinity.nome}</span>
             <p className={estilos.descricaoPlano}>
-              Recursos avançados com suporte 24/7, gravações e nuvem.
+              {tabela.cards.infinity.descricao}
             </p>
-            <div className={estilos.preco}>R$30,00</div>
+            <div className={estilos.preco}>{tabela.cards.infinity.preco}</div>
             <ul className={estilos.listaFuncionalidades}>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Inclui todas funcionalidades do Origin</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Reconhecimento de placas e cédulas</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Leitura de texto</li>
-              <li><FaCheckCircle className={estilos.checkRosa} /> Primeira manutenção grátis</li>
+              {tabela.cards.infinity.lista.map((item, index) => (
+                <li key={index}>
+                  <FaCheckCircle className={estilos.checkRosa} /> {item}
+                </li>
+              ))}
             </ul>
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoInfinity}`}>
-              Atualize para Infinity
+              {tabela.cards.infinity.botao}
             </a>
           </div>
         </article>
 
+
         <article className={estilos.cartaoDestacado} >
-          
           <div className={estilos.headerDestacado}>
-            Recomendado <IoSparkles size={16} />
+            {tabela.cards.guardian.badge} <IoSparkles size={16} />
           </div>
 
           <div className={estilos.corpoDestacado}>
-            <span className={estilos.tipoPlano}>Guardian</span>
+            <span className={estilos.tipoPlano}>{tabela.cards.guardian.nome}</span>
             <p className={estilos.descricaoPlano}>
-              Segurança com histórico da localização e rede de apoio familiar.
+              {tabela.cards.guardian.descricao}
             </p>
-            <div className={estilos.preco}>R$60,00</div>
+            <div className={estilos.preco}>{tabela.cards.guardian.preco}</div>
             
             <ul className={estilos.listaFuncionalidades}>
-              <li><FaCheckCircle className={estilos.checkRoxo} /> Inclui todas funcionalidades do Origin + Infinity</li>
-              <li><FaCheckCircle className={estilos.checkRoxo} /> Garantia Estendida</li>
-              <li><FaCheckCircle className={estilos.checkRoxo} /> Suporte Prioritário</li>
-              <li><FaCheckCircle className={estilos.checkRoxo} /> Inclusão do sistema Navis para rotas mais seguras</li>
+              {tabela.cards.guardian.lista.map((item, index) => (
+                <li key={index}>
+                  <FaCheckCircle className={estilos.checkRoxo} /> {item}
+                </li>
+              ))}
             </ul>
             
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoGuardian}`}>
-              Assine Agora 
+              {tabela.cards.guardian.botao} 
               <FiArrowUpRight size={18} />
             </a>
           </div>
         </article>
+
+
         <article className={estilos.cartao}>
           <div className={estilos.cartaoInterno}>
-            <span className={estilos.tipoPlano}>Origin</span>
-            <span className={estilos.badgeGratuito}>Gratuito</span>
+            <span className={estilos.tipoPlano}>{tabela.cards.origin.nome}</span>
+            <span className={estilos.badgeGratuito}>{tabela.cards.origin.badge}</span>
             <p className={estilos.descricaoPlano}>
-              Acesso gratuito com funções de acessibilidade, localização e alertas de perigo.
+              {tabela.cards.origin.descricao}
             </p>
-            <div className={estilos.preco}>Gratuito</div>
+            <div className={estilos.preco}>{tabela.cards.origin.preco}</div>
             <ul className={estilos.listaFuncionalidades}>
-              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Acesso a ferramentas de IA essenciais.</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Identificação de objetos/obstáculos</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Localização em tempo real</li>
-              <li><IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> Alertas e Sensores de Perigo</li>
+              {tabela.cards.origin.lista.map((item, index) => (
+                <li key={index}>
+                  <IoCheckmarkCircleOutline className={estilos.checkVerdeAgua} /> {item}
+                </li>
+              ))}
             </ul>
             <a href="#" className={`${estilos.botaoPlano} ${estilos.botaoOrigin}`}>
-              Inicie sua jornada
+              {tabela.cards.origin.botao}
             </a>
           </div>
         </article>

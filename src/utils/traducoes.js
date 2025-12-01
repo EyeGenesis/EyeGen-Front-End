@@ -314,6 +314,57 @@ export const translations = {
           "85,6 mm x 56,5 mm x 21 mm (comprimento x largura x altura)"
         ]
       }
+    },
+    planos: {
+      hero: {
+        titulo: "O melhor do EyeGen\njunto com você",
+        botao: "Conheça Nossos Planos"
+      },
+      tabela: {
+        titulo: "Inicie uma jornada de novas possibilidades",
+        subtitulo: "Nossos planos foram desenhados para proporcionar a você funcionalidades completas de locomoção e tarefas diárias.",
+        toggle: "Planos Mensais",
+        cards: {
+          infinity: {
+            nome: "Infinity",
+            descricao: "Recursos avançados com suporte 24/7, gravações e nuvem.",
+            preco: "R$30,00",
+            botao: "Atualize para Infinity",
+            lista: [
+              "Inclui todas funcionalidades do Origin",
+              "Reconhecimento de placas e cédulas",
+              "Leitura de texto",
+              "Primeira manutenção grátis"
+            ]
+          },
+          guardian: {
+            nome: "Guardian",
+            badge: "Recomendado",
+            descricao: "Segurança com histórico da localização e rede de apoio familiar.",
+            preco: "R$60,00",
+            botao: "Assine Agora",
+            lista: [
+              "Inclui todas funcionalidades do Origin + Infinity",
+              "Garantia Estendida",
+              "Suporte Prioritário",
+              "Inclusão do sistema Navis para rotas mais seguras"
+            ]
+          },
+          origin: {
+            nome: "Origin",
+            badge: "Gratuito",
+            descricao: "Acesso gratuito com funções de acessibilidade, localização e alertas de perigo.",
+            preco: "Gratuito",
+            botao: "Inicie sua jornada",
+            lista: [
+              "Acesso a ferramentas de IA essenciais.",
+              "Identificação de objetos/obstáculos",
+              "Localização em tempo real",
+              "Alertas e Sensores de Perigo"
+            ]
+          }
+        }
+      }
     }
   },
   en: {
@@ -628,6 +679,57 @@ export const translations = {
           "Lithium Polymer Battery (LiPo) 3.7V 10,000 mAh",
           "85.6 mm x 56.5 mm x 21 mm (length x width x height)"
         ]
+      }
+    },
+    planos: {
+      hero: {
+        titulo: "The best of\nEyeGen\nwith you",
+        botao: "Discover Our Plans"
+      },
+      tabela: {
+        titulo: "Start a journey of new possibilities",
+        subtitulo: "Our plans are designed to provide you with complete mobility and daily task functionalities.",
+        toggle: "Monthly Plans",
+        cards: {
+          infinity: {
+            nome: "Infinity",
+            descricao: "Advanced features with 24/7 support, recordings, and cloud.",
+            preco: "R$30.00",
+            botao: "Upgrade to Infinity",
+            lista: [
+              "Includes all Origin features",
+              "License plate and banknote recognition",
+              "Text reading",
+              "First maintenance free"
+            ]
+          },
+          guardian: {
+            nome: "Guardian",
+            badge: "Recommended",
+            descricao: "Safety with location history and family support network.",
+            preco: "R$60.00",
+            botao: "Subscribe Now",
+            lista: [
+              "Includes all Origin + Infinity features",
+              "Extended Warranty",
+              "Priority Support",
+              "Inclusion of Navis system for safer routes"
+            ]
+          },
+          origin: {
+            nome: "Origin",
+            badge: "Free",
+            descricao: "Free access with accessibility, location, and danger alert functions.",
+            preco: "Free",
+            botao: "Start your journey",
+            lista: [
+              "Access to essential AI tools.",
+              "Object/obstacle identification",
+              "Real-time location",
+              "Danger Alerts and Sensors"
+            ]
+          }
+        }
       }
     }
   }

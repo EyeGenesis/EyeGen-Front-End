@@ -22,6 +22,7 @@
   line-height: 1.2;
   margin: 0 0 2rem 0; 
   max-width: 500px; 
+  white-space: pre-line;
 }
 
 .botaoPlanos {
