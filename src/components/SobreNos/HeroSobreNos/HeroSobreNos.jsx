@@ -1,8 +1,11 @@
 import React from "react";
 import estilos from "./HeroSobreNos.module.css";
 import videoFundo from "../../../assets/videos/video.mp4";
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const HeroSobreNos = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.heroSobreNos}>
       <video
@@ -19,14 +22,9 @@ const HeroSobreNos = () => {
       <div className={estilos.overlay}></div>
 
       <div className={estilos.container}>
-        <h1>Sobre Nós</h1>
+        <h1>{t.sobreNos.hero.titulo}</h1>
         <p>
-          Acreditamos na tecnologia como uma ponte direta para a independência
-          de pessoas com deficiência visual.
-          <br />
-          Com essa convicção, o EyeGen nasceu em ambiente acadêmico com objetivo
-          de construir uma ferramenta que auxilia-se pessoas a locomoverem com
-          mais segurança e confiança.
+          {t.sobreNos.hero.texto}
         </p>
       </div>
     </section>

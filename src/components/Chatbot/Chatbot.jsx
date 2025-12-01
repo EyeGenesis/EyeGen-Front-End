@@ -5,7 +5,7 @@ import ChatInput from './ChatInput';
 import { useState, useRef, useEffect } from 'react';
 import ChatbotIcon from './ChatbotIcon';
 import ChatMensagem from './ChatMensagem';
-import { eyegenInfo } from '../eyegenInfo';
+import { eyegenInfo } from '../../utils/eyegenInfo';
 
 
 

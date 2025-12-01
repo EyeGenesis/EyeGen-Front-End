@@ -2,8 +2,11 @@ import React from "react";
 import estilos from "./MissaoSobreNos.module.css";
 import iconeUniao from "../../../assets/Union.png";
 import imagemGrupo from "../../../assets/missao-grupo.png";
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const MissaoSobreNos = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.secaoMissao}>
       <div className={estilos.container}>
@@ -21,7 +24,7 @@ const MissaoSobreNos = () => {
 
         <div className={estilos.colunaTexto}>
           <div className={estilos.tituloWrapper}>
-            <h2>O que nos move</h2>
+            <h2>{t.sobreNos.missao.titulo}</h2>
             <img
               src={iconeUniao}
               alt="Icone de união"
@@ -30,10 +33,7 @@ const MissaoSobreNos = () => {
           </div>
 
           <p>
-            Nossa missão é promover a autonomia e elevando significativamente a
-            sua qualidade de vida. <br />
-            Acreditamos que todos merecem as ferramentas e o suporte para viver
-            uma vida plena e independente.
+            {t.sobreNos.missao.texto}
           </p>
         </div>
       </div>
