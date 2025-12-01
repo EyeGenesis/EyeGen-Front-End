@@ -2,8 +2,11 @@ import React from 'react';
 import estilos from './ContatoSuporte.module.css';
 import { IoMailOutline, IoMicOutline } from 'react-icons/io5';
 import imagemContato from '../../../assets/pai-filho-contato.png'; 
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const ContatoSuporte = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.secaoContato}>
       <div className={estilos.container}>
@@ -11,31 +14,30 @@ const ContatoSuporte = () => {
         <div className={estilos.colunaImagem}>
           <img 
             src={imagemContato} 
-            alt="Pai segurando a mão de seu filho com deficiência visual" 
+            alt={t.suporte.contato.altImagem} 
           />
         </div>
 
         <div className={estilos.colunaFormulario}>
-          <h3>Entre em contato com nosso Suporte Técnico</h3>
+          <h3>{t.suporte.contato.titulo}</h3>
           <p>
-            Ainda está com Dúvidas? Envie sua mensagem 
-            para a equipe de suporte EyeGen.
+            {t.suporte.contato.texto}
           </p>
 
           <form className={estilos.formulario}>
 
             <div className={estilos.campoInput}>
               <IoMailOutline className={estilos.iconeInput} />
-              <input type="email" placeholder="Insira seu e-mail" />
+              <input type="email" placeholder={t.suporte.contato.placeholders.email} />
             </div>
             
             <div className={estilos.campoInput}>
               <IoMicOutline className={estilos.iconeInput} />
-              <textarea placeholder="Insira sua dúvida" rows="4"></textarea>
+              <textarea placeholder={t.suporte.contato.placeholders.duvida} rows="4"></textarea>
             </div>
 
             <button type="submit" className={estilos.botaoEnviar}>
-              Enviar mensagem
+              {t.suporte.contato.botao}
             </button>
           </form>
         </div>

@@ -200,6 +200,92 @@ export const translations = {
         titulo: "Quem Nós Somos"
       }
     },
+    suporte: {
+      hero: {
+        preTitulo: "Suporte EyeGen",
+        titulo: "Encontre Ajuda e Liberdade em Cada Passo",
+        texto: "Bem-vindo à Central de Suporte Eyegen. Escolha uma das opções abaixo para aprender, atualizar ou pedir ajuda.",
+        botao: "Falar com a equipe Suporte"
+      },
+      guias: {
+        titulo: "Guias de Uso",
+        filtro: "Guia de primeiros passos com o EyeGlass",
+        altImagens: {
+          guia1: "Homem idoso com deficiência visual em uma estação de metrô",
+          guia2: "Thumbnail de guia de uso sobre IA",
+          guia3: "Thumbnail de guia de uso sobre funcionalidades"
+        }
+      },
+      centralAjuda: {
+        titulo: "Central de ajuda",
+        subtitulo: "Aqui você conhece as principais perguntas sobre as funcionalidades do EyeGen",
+        items: [
+          {
+            id: 1,
+            title: 'Inteligência Artificial',
+            subItems: [
+              { id: 101, question: 'O que o EyeGlass pode fazer?', answer: 'Resposta: Ele é o seu guia, garante que a sua locomoção seja segura e eficiente, identifica pessoas e descreve o ambiente. Além disso ele é seu companheiro podendo te ajudar em tarefas diárias como leitura de textos, facilitação da utilização de transporte público, entre outros.' },
+              { id: 102, question: 'O EyeGlass precisa de internet para funcionar?', answer: 'Resposta: Sim, pois ele exige do processamento em nuvem, gps entre outras funcionalidades essenciais.' },
+              { id: 103, question: 'E se o EyeGlass me der uma instrução errada?', answer: 'Resposta: O nosso assistente foi desenvolvido para te levar com segurança aonde você quiser, porém se ele der alguma instrução te guiando para outro caminho, o próprio EyeGlass vai corrigir seu próprio erro e logo retornará para a rota desejada.' },
+              { id: 104, question: 'A IA é personalizável?', answer: 'Resposta: Sim você pode escolher entre respostas curtas ou detalhadas, além disso estamos trabalhando para que o contato com o EyeGlass seja o mais humanizado possível, para garantir conforto e confiabilidade para você.' },
+            ]
+          },
+          {
+            id: 2,
+            title: 'Bateria e Carregamento',
+            subItems: [
+              { id: 201, question: 'Qual a duração da bateria?', answer: 'Resposta: A duração é de 6 a 12 horas.' },
+              { id: 202, question: 'Como sei que o EyeGlass está carregando?', answer: 'Resposta: Ao conectar o carregador, você ouvirá o som "Carregando" e o LED lateral ficará vermelho. Quando totalmente carregado, o LED muda para verde.' },
+              { id: 203, question: 'O que fazer se o dispositivo não ligar?', answer: 'Resposta: Verifique se o cabo está conectado corretamente. Se ainda não ligar, mantenha o botão pressionado por 10 segundos para forçar a reinicialização.' },
+            ]
+          },
+          {
+            id: 3,
+            title: 'Conectividade',
+            subItems: [
+              { id: 301, question: 'Como conectar o EyeGlass ao WI-FI?', answer: 'Resposta: Primeiro você deve abrir o aplicativo EyeGen e ir até a opção "Conectar na mesma rede WI-FI". Após isso, você deve seguir as instruções, quando o EyeGlass for conectado, o óculos emitirá uma mensagem de sucesso e uma leve vibração.' },
+              { id: 302, question: 'Como emparelhar o EyeGlass com o aplicativo EyeGen?', answer: 'Resposta: Ative o bluetooth no EyeGlass e EyeGen. No aplicativo, navegue até a opção "Conectar um novo óculos", e siga o passo a passo no app.' },
+              { id: 303, question: 'O EyeGlass funciona sem internet?', answer: 'Resposta: Para todas as funcionalidades, sim, porém funciona em atividades báscias, como saber nível de bateria ou leitura de textos. Além da internet, é crucial garantir a conexão com o aplicativo.' },
+            ]
+          },
+          {
+            id: 4,
+            title: 'Suporte e Garantia',
+            subItems: [
+              { id: 401, question: 'Como acionar a garantia?', answer: 'Resposta: Envie um e-mail para suporte_eyegen@gmail.com informando o código do produto. Nossa equipe responderá com as instruções de envio e reparo.' },
+              { id: 402, question: 'Qual o prazo de garantia do EyeGlass?', answer: 'Resposta: A garantia é de 12 meses a partir da data de compra, cobrindo defeitos de fabricação.' },
+              { id: 403, question: 'Onde encontro assistência técnica?', answer: 'Resposta: Converse com a nossa equipe de suporte técnico, eles te encaminharão a lista de centros autorizados da EyeGen.' },
+            ]
+          },
+          {
+            id: 5,
+            title: 'Comandos de Voz',
+            subItems: [
+              { id: 501, question: 'Como posso ativar o assistente do EyeGlass?', answer: 'Resposta: Conecte o EyeGlass com o aplicativo EyeGen, aperte no botão localizado na lateral esquerda do óculos. Agora é só dar o comando "Olá, EG!"' },
+              { id: 502, question: 'Quais comandos o EyeGlass reconhece?', answer: 'Resposta: Ele reconhece comandos sobre o ambiente como por exemplo: "Descreva o ambiente ao meu redor?" ou "Tem alguém comigo neste local?". Além disso, reconhece perguntas básicas como "O que está escrito aqui?", "Quem é essa pessoa?", "Qual o nível da bateria?", "Me leve até o mercado mais próximo", entre outros.' },
+              { id: 503, question: 'O que fazer se o EyeGlass não reconhecer a minha voz?', answer: 'Resposta: Verifique se o óculos está conectado ao app ou à internet. Além do mais, certifique-se de que o microfone esteja funcionando corretamente fazendo testes de voz pelo app.' },
+              { id: 504, question: 'E se o EyeGlass não reconhecer o meu comando?', answer: 'Resposta: Reformule o comando sendo mais objetivo para que a inteligência artificial processar a pergunta ou comando corretamente.' },
+            ]
+          }
+        ]
+      },
+      firmware: {
+        titulo: "Atualizações do Aplicativo",
+        texto: "Mantenha seu app do Eyeglass sempre atualizado para garantir o melhor desempenho e novas funções de acessibilidade.",
+        botao: "Explore nossas atualizações",
+        altImagem: "Mulher sorrindo usando óculos EyeGen e segurando um celular"
+      },
+      contato: {
+        titulo: "Entre em contato com nosso Suporte Técnico",
+        texto: "Ainda está com Dúvidas? Envie sua mensagem para a equipe de suporte EyeGen.",
+        placeholders: {
+          email: "Insira seu e-mail",
+          duvida: "Insira sua dúvida"
+        },
+        botao: "Enviar mensagem",
+        altImagem: "Pai segurando a mão de seu filho com deficiência visual"
+      }
+    }
   },
   en: {
       header: {
@@ -399,6 +485,92 @@ export const translations = {
         quemSomos: {
           titulo: "Who We Are"
         }
+      },
+      suporte: {
+      hero: {
+        preTitulo: "EyeGen Support",
+        titulo: "Find Help and Freedom in Every Step",
+        texto: "Welcome to the Eyegen Support Center. Choose one of the options below to learn, update, or ask for help.",
+        botao: "Talk to Support Team"
+      },
+      guias: {
+        titulo: "User Guides",
+        filtro: "EyeGlass Getting Started Guide",
+        altImagens: {
+          guia1: "Elderly man with visual impairment at a subway station",
+          guia2: "AI user guide thumbnail",
+          guia3: "Features user guide thumbnail"
+        }
+      },
+      centralAjuda: {
+        titulo: "Help Center",
+        subtitulo: "Here you can find the main questions about EyeGen features",
+        items: [
+          {
+            id: 1,
+            title: 'Artificial Intelligence',
+            subItems: [
+              { id: 101, question: 'What can EyeGlass do?', answer: 'Answer: It is your guide, ensuring your mobility is safe and efficient, identifying people, and describing the environment. It is also your companion, helping with daily tasks like reading text, using public transport, and more.' },
+              { id: 102, question: 'Does EyeGlass need internet to work?', answer: 'Answer: Yes, as it requires cloud processing, GPS, and other essential features.' },
+              { id: 103, question: 'What if EyeGlass gives me wrong instructions?', answer: 'Answer: Our assistant was developed to guide you safely wherever you want, but if it guides you to another path, EyeGlass will correct its own error and soon return to the desired route.' },
+              { id: 104, question: 'Is the AI customizable?', answer: 'Answer: Yes, you can choose between short or detailed answers. We are also working to make contact with EyeGlass as humanized as possible to ensure comfort and reliability for you.' },
+            ]
+          },
+          {
+            id: 2,
+            title: 'Battery and Charging',
+            subItems: [
+              { id: 201, question: 'What is the battery life?', answer: 'Answer: The duration is 6 to 12 hours.' },
+              { id: 202, question: 'How do I know EyeGlass is charging?', answer: 'Answer: When connecting the charger, you will hear "Charging" and the side LED will turn red. When fully charged, the LED turns green.' },
+              { id: 203, question: 'What to do if the device does not turn on?', answer: 'Answer: Check if the cable is connected correctly. If it still does not turn on, press and hold the button for 10 seconds to force a restart.' },
+            ]
+          },
+          {
+            id: 3,
+            title: 'Connectivity',
+            subItems: [
+              { id: 301, question: 'How to connect EyeGlass to WI-FI?', answer: 'Answer: First, open the EyeGen app and go to the "Connect to same WI-FI network" option. Follow the instructions; when connected, the glasses will emit a success message and a slight vibration.' },
+              { id: 302, question: 'How to pair EyeGlass with the EyeGen app?', answer: 'Answer: Enable Bluetooth on EyeGlass and EyeGen. In the app, navigate to "Connect a new glass" and follow the step-by-step instructions.' },
+              { id: 303, question: 'Does EyeGlass work without internet?', answer: 'Answer: For all functionalities, yes, but it works for basic activities like checking battery level or reading text. Besides internet, ensuring connection with the app is crucial.' },
+            ]
+          },
+          {
+            id: 4,
+            title: 'Support and Warranty',
+            subItems: [
+              { id: 401, question: 'How to claim the warranty?', answer: 'Answer: Send an email to suporte_eyegen@gmail.com with the product code. Our team will respond with shipping and repair instructions.' },
+              { id: 402, question: 'What is the warranty period for EyeGlass?', answer: 'Answer: The warranty is 12 months from the date of purchase, covering manufacturing defects.' },
+              { id: 403, question: 'Where can I find technical assistance?', answer: 'Answer: Chat with our technical support team, they will forward you the list of authorized EyeGen centers.' },
+            ]
+          },
+          {
+            id: 5,
+            title: 'Voice Commands',
+            subItems: [
+              { id: 501, question: 'How can I activate the EyeGlass assistant?', answer: 'Answer: Connect EyeGlass with the EyeGen app, press the button on the left side of the glasses. Now just give the command "Hello, EG!"' },
+              { id: 502, question: 'What commands does EyeGlass recognize?', answer: 'Answer: It recognizes commands about the environment like: "Describe the environment around me?" or "Is anyone with me here?". It also recognizes basic questions like "What is written here?", "Who is this person?", "What is the battery level?", "Take me to the nearest market", among others.' },
+              { id: 503, question: 'What to do if EyeGlass does not recognize my voice?', answer: 'Answer: Check if the glasses are connected to the app or internet. Also, ensure the microphone is working correctly by doing voice tests through the app.' },
+              { id: 504, question: 'What if EyeGlass does not recognize my command?', answer: 'Answer: Rephrase the command being more objective so the artificial intelligence can process the question or command correctly.' },
+            ]
+          }
+        ]
+      },
+      firmware: {
+        titulo: "Application Updates",
+        texto: "Keep your Eyeglass app always updated to ensure optimal performance and new accessibility features.",
+        botao: "Explore our updates",
+        altImagem: "Smiling woman wearing EyeGen glasses and holding a cell phone"
+      },
+      contato: {
+        titulo: "Contact our Technical Support",
+        texto: "Still have doubts? Send your message to the EyeGen support team.",
+        placeholders: {
+          email: "Enter your e-mail",
+          duvida: "Enter your question"
+        },
+        botao: "Send message",
+        altImagem: "Father holding hands with his visually impaired son"
       }
     }
+  }
 };

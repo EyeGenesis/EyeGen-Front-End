@@ -1,7 +1,7 @@
 import HeroSuporte from "./HeroSuporte/HeroSuporte";
 import GuiasUso from "./GuiasUso/GuiasUso";
 import CentralAjuda from "./CentralAjuda/CentralAjuda";
-import AttFirmware from "./AttFirmware/AttFirmware";
+import AttApp from "./AttApp/AttApp";
 import ContatoSuporte from "./ContatoSuporte/ContatoSuporte";
 
 export default function Suporte() {
@@ -10,7 +10,7 @@ export default function Suporte() {
       <HeroSuporte />
       <GuiasUso />
       <CentralAjuda />
-      <AttFirmware />
+      <AttApp />
       <ContatoSuporte />
     </main>
   );

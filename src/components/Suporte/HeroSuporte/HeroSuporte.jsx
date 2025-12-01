@@ -1,29 +1,30 @@
 import React from "react";
 import estilos from "./HeroSuporte.module.css";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const HeroSuporte = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.heroSuporte}>
       <div className={estilos.container}>
-        <span className={estilos.preTitulo}>Suporte EyeGen</span>
+        <span className={estilos.preTitulo}>{t.suporte.hero.preTitulo}</span>
 
-        <h1>Encontre Ajuda e Liberdade em Cada Passo</h1>
+        <h1>{t.suporte.hero.titulo}</h1>
 
         <div className={estilos.divider}></div>
 
         <p>
-          Bem-vindo à Central de Suporte Eyegen. Escolha uma das opções abaixo
-          para aprender, atualizar ou pedir ajuda.
+          {t.suporte.hero.texto}
         </p>
 
         <div className={estilos.buttonGroup}>
-  
           <Link
             to="/suporte"
             className={`${estilos.botao} ${estilos.botaoSecundario}`}
           >
-            Falar com a equipe Suporte
+            {t.suporte.hero.botao}
           </Link>
         </div>
       </div>

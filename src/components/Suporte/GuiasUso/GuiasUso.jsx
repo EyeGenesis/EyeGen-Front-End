@@ -8,35 +8,37 @@ import { FaPlayCircle, FaPlus } from 'react-icons/fa';
 import thumbVideo1 from '../../../assets/primeiro-acesso.png';
 import thumbVideo2 from '../../../assets/ia.png'; 
 import thumbVideo3 from '../../../assets/funcionalidades.jpg';
-import suporteTransicao from "../../../assets/suporte-transition.png";
-
-const guias = [
-  {
-    id: 1,
-    thumbnail: thumbVideo1,
-    alt: 'Homem idoso com deficiência visual em uma estação de metrô',
-  },
-  {
-    id: 2,
-    thumbnail: thumbVideo2,
-    alt: 'Thumbnail de outro guia de uso',
-  },
-  {
-    id: 3,
-    thumbnail: thumbVideo3,
-    alt: 'Thumbnail de mais um guia de uso',
-  },
-];
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const GuiasDeUso = () => {
+  const { t } = useLanguage();
+
+  const guias = [
+    {
+      id: 1,
+      thumbnail: thumbVideo1,
+      alt: t.suporte.guias.altImagens.guia1,
+    },
+    {
+      id: 2,
+      thumbnail: thumbVideo2,
+      alt: t.suporte.guias.altImagens.guia2,
+    },
+    {
+      id: 3,
+      thumbnail: thumbVideo3,
+      alt: t.suporte.guias.altImagens.guia3,
+    },
+  ];
+
   return (
     <section className={estilos.secaoGuias}>
   
       <div className={estilos.container}>
         
-        <h2 className={estilos.tituloPrincipal}>Guias de Uso</h2>
+        <h2 className={estilos.tituloPrincipal}>{t.suporte.guias.titulo}</h2>
         <div className={estilos.chipFiltro}>
-          Guia de primeiros passos com o EyeGlass
+          {t.suporte.guias.filtro}
         </div>
 
         <Swiper
