@@ -285,208 +285,237 @@ export const translations = {
         botao: "Enviar mensagem",
         altImagem: "Pai segurando a mão de seu filho com deficiência visual"
       }
+    },
+    comprar: {
+      hero: {
+        titulo: "EYEGLASS",
+        subtitulo: "Inteligência que guia seus passos"
+      },
+      design: {
+        titulo: "Design Elegante",
+        texto: "Apresentam um design esportivo e elegante em preto, com lentes escuras de formato curvado para um visual moderno e proteção otimizada.",
+        produtoNome: "EYE",
+        produtoSpan: "Glass",
+        preco: "R$ 3000,00",
+        botao: "Comprar",
+        altImagens: {
+          grid1: "Detalhe do óculos",
+          video2: "Vídeo de demonstração do óculos",
+          video3: "Outro vídeo de demonstração do óculos",
+          principal: "Óculos EYE Glass"
+        }
+      },
+      componentes: {
+        titulo: "Componentes",
+        lista: [
+          "Raspberry pi 4 4gb",
+          "Raspberry Pi Câmera Module (RespCam) Rev 1.3",
+          "Bateria de Polímero de Lítio (LiPo) 3.7V 10.000 mAh",
+          "85,6 mm x 56,5 mm x 21 mm (comprimento x largura x altura)"
+        ]
+      }
     }
   },
   en: {
-      header: {
-        inicio: "Home",
-        sobre: "About us",
-        suporte: "Support",
-        comprar: "Buy",
-        planos: "Plans",
-        entrar: "Login",
-        cadastrar: "Sign Up",
-        idioma: "EN-US"
+    header: {
+      inicio: "Home",
+      sobre: "About us",
+      suporte: "Support",
+      comprar: "Buy",
+      planos: "Plans",
+      entrar: "Login",
+      cadastrar: "Sign Up",
+      idioma: "EN-US"
+    },
+    home: {
+      hero: {
+        titulo: "Intelligence that\nguides your steps",
+        botao: "I am a client"
       },
-      home: {
-        hero: {
-          titulo: "Intelligence that\nguides your steps",
-          botao: "I am a client"
+      ajuda: {
+        titulo: "How does EYEGEN\nhelp me?"
+      },
+      seguranca: {
+        titulo: "Safety wherever you go",
+        card1: {
+          titulo: "Our Commitment to your safety",
+          texto: "With technology and empathy, EyeGen works so you can move around without worrying about obstacles.",
+          link1: "Product Features",
+          link2: "How EYEGEN keeps me safe",
+          link3: "See more stories"
         },
-        ajuda: {
-          titulo: "How does EYEGEN\nhelp me?"
-        },
-        seguranca: {
-          titulo: "Safety wherever you go",
-          card1: {
-            titulo: "Our Commitment to your safety",
-            texto: "With technology and empathy, EyeGen works so you can move around without worrying about obstacles.",
-            link1: "Product Features",
-            link2: "How EYEGEN keeps me safe",
-            link3: "See more stories"
-          },
-          card2: {
-            titulo: "We care about who matters to you",
-            texto: "Eyegen is for everyone. Developed to accompany every stage of life with comfort and technology."
-          }
-        },
-        infoMascote: {
-          cards: {
-            sobre: {
-              titulo: "About us",
-              texto: "Discover who we are, what motivates us, and what we envision for the future.",
-              link: "Learn more"
-            },
-            planos: {
-              titulo: "Plans",
-              texto: "Discover the ideal plan for your needs. Choose what suits you best.",
-              link: "Learn more"
-            },
-            suporte: {
-              titulo: "Support",
-              texto: "Need help? Count on our specialized team to give you the support you need.",
-              link: "Learn more"
-            }
-          },
-          mascote: {
-            titulo: "Meet GENY, our guide dog mascot!",
-            p1: "Created to facilitate your interaction with our platform, Geny guides you simply and intelligently through every step, from knowing EyeGen features to making your purchase safely and practically.",
-            p2: "She creates records, offers information, shares usage and care tips, and ensures your journey is light, accessible, and welcoming.",
-            botao: "Chat with GENY"
-          }
-        },
-        produto: {
-          titulo: "About Our Product",
-          subtitulo: "Transform your day-to-day with autonomy and safety",
-          botao: "Buy Now",
-          cards: {
-            design: {
-              titulo: "Comfortable Design",
-              texto: "Descriptive text about the design.",
-              link: "Learn more"
-            },
-            camera: {
-              titulo: "1080p Camera",
-              texto: "Text",
-              link: "Learn more"
-            },
-            bateria: {
-              titulo: "Quality Battery",
-              texto: "Battery lasting 5 to 8 hours",
-              link: "Learn more"
-            },
-            material: {
-              titulo: "Resistant Material",
-              texto: "Text",
-              link: "Learn more"
-            }
-          }
-        },
-        quemUsa: {
-          titulo: "Who uses EYEGLASS?",
-          subtitulo: "People with Low Vision and Visually Impaired",
-          p1: "Our assistive glasses bring more sharpness and clarity to people with low vision. The technology magnifies text, increases contrast, and highlights obstacles, restoring confidence and independence to your daily life.",
-          p2: "Additionally, we feature object recognition with voice feedback for blind people."
-        },
-        comunidade: {
-          titulo: "Our Community",
-          texto: "Experience Eyegen and share the same emotion",
-          botao: "I want to join",
-          carrosselTitulo: "Real experiences with Eyegen",
-          depoimentos: [
-            {
-              citacao: "Eye Glass is my new freedom. Object recognition and GPS provide total confidence and autonomy to go out on the street.",
-              nome: "Lucas P.",
-              local: "Belo Horizonte",
-              nota: "10/10"
-            },
-            {
-              citacao: "Technology that works! I need alerts and GPS. A game changer for commuting to work and exploring new paths.",
-              nome: "Ricardo A.",
-              local: "São Paulo",
-              nota: "10/10"
-            },
-            {
-              citacao: "The best invention for low vision. Intuitive system, easy to use, and restores the safety and independence I haven't felt in years.",
-              nome: "Pedro B.",
-              local: "Curitiba",
-              nota: "10/10"
-            },
-            {
-              citacao: "It gave me wings! I solve my life with total independence, to learn and have fun. The technology is light, discreet, and values our dignity.",
-              nome: "Marina R.",
-              local: "Brasília",
-              nota: "10/10"
-            },
-            {
-              citacao: "Essential for those with little vision. The glasses are robust, and the technology sees what is ahead, allowing to avoid obstacles quickly.",
-              nome: "Gabriel S.",
-              local: "Rio de Janeiro",
-              nota: "10/10"
-            }
-          ]
-        },
-        apoiadores: {
-          titulo: "Our Supporters",
-          texto: "Identified with our product and would like to contribute?",
-          botao: "Learn how"
-        },
-        contribuicao: {
-          titulo: "Contribute too",
-          texto: "Identified with our product and would like to contribute?",
-          botao: "Learn how"
+        card2: {
+          titulo: "We care about who matters to you",
+          texto: "Eyegen is for everyone. Developed to accompany every stage of life with comfort and technology."
         }
       },
+      infoMascote: {
+        cards: {
+          sobre: {
+            titulo: "About us",
+            texto: "Discover who we are, what motivates us, and what we envision for the future.",
+            link: "Learn more"
+          },
+          planos: {
+            titulo: "Plans",
+            texto: "Discover the ideal plan for your needs. Choose what suits you best.",
+            link: "Learn more"
+          },
+          suporte: {
+            titulo: "Support",
+            texto: "Need help? Count on our specialized team to give you the support you need.",
+            link: "Learn more"
+          }
+        },
+        mascote: {
+          titulo: "Meet GENY, our guide dog mascot!",
+          p1: "Created to facilitate your interaction with our platform, Geny guides you simply and intelligently through every step, from knowing EyeGen features to making your purchase safely and practically.",
+          p2: "She creates records, offers information, shares usage and care tips, and ensures your journey is light, accessible, and welcoming.",
+          botao: "Chat with GENY"
+        }
+      },
+      produto: {
+        titulo: "About Our Product",
+        subtitulo: "Transform your day-to-day with autonomy and safety",
+        botao: "Buy Now",
+        cards: {
+          design: {
+            titulo: "Comfortable Design",
+            texto: "Descriptive text about the design.",
+            link: "Learn more"
+          },
+          camera: {
+            titulo: "1080p Camera",
+            texto: "Text",
+            link: "Learn more"
+          },
+          bateria: {
+            titulo: "Quality Battery",
+            texto: "Battery lasting 5 to 8 hours",
+            link: "Learn more"
+          },
+          material: {
+            titulo: "Resistant Material",
+            texto: "Text",
+            link: "Learn more"
+          }
+        }
+      },
+      quemUsa: {
+        titulo: "Who uses EYEGLASS?",
+        subtitulo: "People with Low Vision and Visually Impaired",
+        p1: "Our assistive glasses bring more sharpness and clarity to people with low vision. The technology magnifies text, increases contrast, and highlights obstacles, restoring confidence and independence to your daily life.",
+        p2: "Additionally, we feature object recognition with voice feedback for blind people."
+      },
+      comunidade: {
+        titulo: "Our Community",
+        texto: "Experience Eyegen and share the same emotion",
+        botao: "I want to join",
+        carrosselTitulo: "Real experiences with Eyegen",
+        depoimentos: [
+          {
+            citacao: "Eye Glass is my new freedom. Object recognition and GPS provide total confidence and autonomy to go out on the street.",
+            nome: "Lucas P.",
+            local: "Belo Horizonte",
+            nota: "10/10"
+          },
+          {
+            citacao: "Technology that works! I need alerts and GPS. A game changer for commuting to work and exploring new paths.",
+            nome: "Ricardo A.",
+            local: "São Paulo",
+            nota: "10/10"
+          },
+          {
+            citacao: "The best invention for low vision. Intuitive system, easy to use, and restores the safety and independence I haven't felt in years.",
+            nome: "Pedro B.",
+            local: "Curitiba",
+            nota: "10/10"
+          },
+          {
+            citacao: "It gave me wings! I solve my life with total independence, to learn and have fun. The technology is light, discreet, and values our dignity.",
+            nome: "Marina R.",
+            local: "Brasília",
+            nota: "10/10"
+          },
+          {
+            citacao: "Essential for those with little vision. The glasses are robust, and the technology sees what is ahead, allowing to avoid obstacles quickly.",
+            nome: "Gabriel S.",
+            local: "Rio de Janeiro",
+            nota: "10/10"
+          }
+        ]
+      },
+      apoiadores: {
+        titulo: "Our Supporters",
+        texto: "Identified with our product and would like to contribute?",
+        botao: "Learn how"
+      },
+      contribuicao: {
+        titulo: "Contribute too",
+        texto: "Identified with our product and would like to contribute?",
+        botao: "Learn how"
+      }
+    },
 
-      footer: {
-        titulo: "Stay updated",
-        inputPlaceholder: "Email",
-        colunas: {
-          produtos: "Products",
-          redes: "Social Media",
-          duvidas: "Questions",
-          sobre: "About"
-        },
-        links: {
-          eyeglass: "Eyeglass",
-          planos: "Plans",
-          suporte: "Support",
-          sobreNos: "About us"
-        }
+    footer: {
+      titulo: "Stay updated",
+      inputPlaceholder: "Email",
+      colunas: {
+        produtos: "Products",
+        redes: "Social Media",
+        duvidas: "Questions",
+        sobre: "About"
       },
-      sobreNos: {
-        hero: {
-          titulo: "About Us",
-          texto: "We believe in technology as a direct bridge to independence for visually impaired people. With this conviction, EyeGen was born in an academic environment with the goal of building a tool that helps people move around with more safety and confidence."
-        },
-        visao: {
-          titulo: "A Look Without Borders",
-          texto: "EyeGen's vision is to become the leading global reference in assistive technology for people with low or no vision, continuously evolving through innovation and research to offer practical and intuitive solutions that promote autonomy and improve quality of life."
-        },
-        bussola: {
-          titulo: "Our Compass",
-          cards: [
-            {
-              titulo: "Creativity",
-              texto: "We see possibilities beyond the obvious, exploring new ideas and approaches to create truly transformative technological solutions."
-            },
-            {
-              titulo: "Social Impact",
-              texto: "We create opportunities for everyone to occupy their space in society, raising self-esteem and positively impacting the lives of people in vulnerable situations."
-            },
-            {
-              titulo: "Inclusion",
-              texto: "Our focus is to include visually impaired people, regardless of their ethnicity. Through our product, we seek to expand their space, voice, and opportunities in society."
-            },
-            {
-              titulo: "Respect",
-              texto: "We respect every individual in their essence, creating technologies that honor their dignity, strengthen their autonomy, and carefully meet their needs."
-            },
-            {
-              titulo: "Collaboration",
-              texto: "We believe that great advances are born from working together, uniting different perspectives to develop a safe, human, and effective experience for our users."
-            }
-          ]
-        },
-        missao: {
-          titulo: "What Drives Us",
-          texto: "Our mission is to promote autonomy and significantly improve your quality of life. We believe everyone deserves the tools and support to live a full and independent life."
-        },
-        quemSomos: {
-          titulo: "Who We Are"
-        }
+      links: {
+        eyeglass: "Eyeglass",
+        planos: "Plans",
+        suporte: "Support",
+        sobreNos: "About us"
+      }
+    },
+    sobreNos: {
+      hero: {
+        titulo: "About Us",
+        texto: "We believe in technology as a direct bridge to independence for visually impaired people. With this conviction, EyeGen was born in an academic environment with the goal of building a tool that helps people move around with more safety and confidence."
       },
-      suporte: {
+      visao: {
+        titulo: "A Look Without Borders",
+        texto: "EyeGen's vision is to become the leading global reference in assistive technology for people with low or no vision, continuously evolving through innovation and research to offer practical and intuitive solutions that promote autonomy and improve quality of life."
+      },
+      bussola: {
+        titulo: "Our Compass",
+        cards: [
+          {
+            titulo: "Creativity",
+            texto: "We see possibilities beyond the obvious, exploring new ideas and approaches to create truly transformative technological solutions."
+          },
+          {
+            titulo: "Social Impact",
+            texto: "We create opportunities for everyone to occupy their space in society, raising self-esteem and positively impacting the lives of people in vulnerable situations."
+          },
+          {
+            titulo: "Inclusion",
+            texto: "Our focus is to include visually impaired people, regardless of their ethnicity. Through our product, we seek to expand their space, voice, and opportunities in society."
+          },
+          {
+            titulo: "Respect",
+            texto: "We respect every individual in their essence, creating technologies that honor their dignity, strengthen their autonomy, and carefully meet their needs."
+          },
+          {
+            titulo: "Collaboration",
+            texto: "We believe that great advances are born from working together, uniting different perspectives to develop a safe, human, and effective experience for our users."
+          }
+        ]
+      },
+      missao: {
+        titulo: "What Drives Us",
+        texto: "Our mission is to promote autonomy and significantly improve your quality of life. We believe everyone deserves the tools and support to live a full and independent life."
+      },
+      quemSomos: {
+        titulo: "Who We Are"
+      }
+    },
+    suporte: {
       hero: {
         preTitulo: "EyeGen Support",
         titulo: "Find Help and Freedom in Every Step",
@@ -570,6 +599,35 @@ export const translations = {
         },
         botao: "Send message",
         altImagem: "Father holding hands with his visually impaired son"
+      }
+    },
+    comprar: {
+      hero: {
+        titulo: "EYEGLASS",
+        subtitulo: "Intelligence that guides your steps"
+      },
+      design: {
+        titulo: "Elegant Design",
+        texto: "Featuring a sporty and elegant black design, with curved dark lenses for a modern look and optimized protection.",
+        produtoNome: "EYE",
+        produtoSpan: "Glass",
+        preco: "R$ 3000.00",
+        botao: "Buy",
+        altImagens: {
+          grid1: "Glasses detail",
+          video2: "Glasses demonstration video",
+          video3: "Another glasses demonstration video",
+          principal: "EYE Glass eyewear"
+        }
+      },
+      componentes: {
+        titulo: "Components",
+        lista: [
+          "Raspberry Pi 4 4GB",
+          "Raspberry Pi Camera Module (RespCam) Rev 1.3",
+          "Lithium Polymer Battery (LiPo) 3.7V 10,000 mAh",
+          "85.6 mm x 56.5 mm x 21 mm (length x width x height)"
+        ]
       }
     }
   }
