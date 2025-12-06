@@ -9,6 +9,7 @@ import EspecProduto from "./components/EspecProduto/EspecProduto.jsx";
 import Cadastro from "./components/Cadastro/Cadastro.jsx";
 import SobreNos from "./components/SobreNos/SobreNos.jsx";
 import Chatbot from "./components/Chatbot/Chatbot.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/comprar" element={<EspecProduto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastre-se" element={<Cadastro />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <Chatbot />
