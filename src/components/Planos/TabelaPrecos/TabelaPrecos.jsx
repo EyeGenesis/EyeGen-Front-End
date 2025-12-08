@@ -1,31 +1,64 @@
 import React from 'react';
-import estilos from './TabelaPrecos.module.css';
-import { FaCheckCircle } from 'react-icons/fa';
-import { IoCheckmarkCircleOutline, IoSparkles } from 'react-icons/io5';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { useLanguage } from "../../../contexto/ContextoLingua";
+import estilos from './TabelaPrecos.module.css'; 
+import { motion } from 'framer-motion';
+import { FaCheckCircle } from 'react-icons/fa'; 
+import { IoCheckmarkCircleOutline, IoSparkles } from 'react-icons/io5'; 
+import { FiArrowUpRight } from 'react-icons/fi'; 
+import { useLanguage } from "../../../contexto/ContextoLingua"; 
 
 const TabelaPrecos = () => {
   const { t } = useLanguage();
   const { tabela } = t.planos;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    },
+  };
+
   return (
     <section className={estilos.secaoPrecos} id='secaoPrecos'>
 
-      <div className={estilos.containerCabecalho}>
+      <motion.div 
+        className={estilos.containerCabecalho}
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <h2>{tabela.titulo}</h2>
         <p>{tabela.subtitulo}</p>
       
         <div className={estilos.togglePlanos}>
           <span>{tabela.toggle}</span>
         </div>
-      </div>
+      </motion.div>
 
-
-      <div className={estilos.containerCards}>
+      <motion.div 
+        className={estilos.containerCards}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         
-
-        <article className={estilos.cartao}>
+        <motion.article 
+          className={estilos.cartao}
+          variants={cardVariants}
+        >
           <div className={estilos.cartaoInterno}>
             <span className={estilos.tipoPlano}>{tabela.cards.infinity.nome}</span>
             <p className={estilos.descricaoPlano}>
@@ -43,10 +76,12 @@ const TabelaPrecos = () => {
               {tabela.cards.infinity.botao}
             </a>
           </div>
-        </article>
+        </motion.article>
 
-
-        <article className={estilos.cartaoDestacado} >
+        <motion.article 
+          className={estilos.cartaoDestacado} 
+          variants={cardVariants}
+        >
           <div className={estilos.headerDestacado}>
             {tabela.cards.guardian.badge} <IoSparkles size={16} />
           </div>
@@ -71,10 +106,12 @@ const TabelaPrecos = () => {
               <FiArrowUpRight size={18} />
             </a>
           </div>
-        </article>
+        </motion.article>
 
-
-        <article className={estilos.cartao}>
+        <motion.article 
+          className={estilos.cartao}
+          variants={cardVariants}
+        >
           <div className={estilos.cartaoInterno}>
             <span className={estilos.tipoPlano}>{tabela.cards.origin.nome}</span>
             <span className={estilos.badgeGratuito}>{tabela.cards.origin.badge}</span>
@@ -93,9 +130,9 @@ const TabelaPrecos = () => {
               {tabela.cards.origin.botao}
             </a>
           </div>
-        </article>
+        </motion.article>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

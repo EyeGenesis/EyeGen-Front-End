@@ -1,22 +1,62 @@
 import React from "react";
-import estilos from "./Seguranca.module.css";
-import imagemHomem from "../../../assets/img/idoso-section.png";
-import imagemCrianca from "../../../assets/img/crianca-section.png";
-import { Link } from "react-router-dom";
-import { useLanguage } from "../../../contexto/ContextoLingua"; 
+import { motion } from "framer-motion"; //
+import estilos from "./Seguranca.module.css"; //
+import imagemHomem from "../../../assets/img/idoso-section.png"; //
+import imagemCrianca from "../../../assets/img/crianca-section.png"; //
+import { Link } from "react-router-dom"; //
+import { useLanguage } from "../../../contexto/ContextoLingua"; //
 
 export default function Seguranca() {
-  const { t } = useLanguage(); 
+  const { t } = useLanguage();
+
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, 
+      },
+    },
+  };
+
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    },
+  };
 
   return (
     <section className={estilos.secaoSeguranca}>
       <div className={estilos.conteudo}>
-        <h2 className={estilos.tituloPrincipal}>
-          {t.home.seguranca.titulo}
-        </h2>
 
-        <div className={estilos.gradeCards}>
-          <article className={estilos.cartao}>
+        <motion.h2 
+          className={estilos.tituloPrincipal}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }} 
+          transition={{ duration: 0.5 }}
+        >
+          {t.home.seguranca.titulo}
+        </motion.h2>
+
+  
+        <motion.div 
+          className={estilos.gradeCards}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} 
+        >
+
+          <motion.article 
+            className={estilos.cartao} 
+            variants={cardVariants}
+          >
             <div className={estilos.imagemContainer}>
               <img
                 src={imagemHomem}
@@ -32,8 +72,13 @@ export default function Seguranca() {
               <Link to="/">{t.home.seguranca.card1.link2}</Link>
               <Link to="/">{t.home.seguranca.card1.link3}</Link>
             </footer>
-          </article>
-          <article className={estilos.cartao}>
+          </motion.article>
+
+
+          <motion.article 
+            className={estilos.cartao} 
+            variants={cardVariants}
+          >
             <div className={estilos.imagemContainer}>
               <img
                 src={imagemCrianca}
@@ -44,8 +89,8 @@ export default function Seguranca() {
             <p>
               {t.home.seguranca.card2.texto}
             </p>
-          </article>
-        </div>
+          </motion.article>
+        </motion.div>
       </div>
     </section>
   );
