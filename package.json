@@ -16,6 +16,7 @@
     "react-router-dom": "^7.9.6",
     "router": "^2.2.0",
     "router-dom": "^3.0.3",
+    "styled-components": "^6.1.19",
     "swiper": "^12.0.3"
   },
   "devDependencies": {
