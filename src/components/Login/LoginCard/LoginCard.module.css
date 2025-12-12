@@ -1,0 +1,374 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* Fundo da página */
+.fundo {
+  min-height: 100vh;
+  background-color: #76B2FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Card principal */
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  height: 760px;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  align-items: center;
+}
+
+
+/* Coluna esquerda */
+.colEsquerda {
+  flex: 1;
+  padding: 50px 50px 50px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 850px;
+}
+
+
+/* Área do logo */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+}
+
+.logoTexto {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #000;
+}
+
+
+/* Título */
+.bemVindo h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #000;
+}
+
+/* Abas (Entrar / Cadastre-se) */
+.tabs {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #000;
+  border-radius: 40px;
+  padding: 1px;
+  overflow: hidden;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.active {
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+}
+
+/* Área dos inputs */
+.inputsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.inputGroup {
+  width: 100%;
+  position: relative;
+  max-width: 400px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 50px 14px 18px;
+  font-size: 14.5px;
+  border: 2px solid #cfcfcf;
+  border-radius: 40px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #7A7A7A;
+}
+
+.icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon img {
+  width: 20px;
+  opacity: 0.85;
+}
+
+/* Botão entrar */
+.botaoEntrar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 0;
+  background-color: #7C3AED;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botaoEntrar:hover {
+  background-color: #6A2ED3;
+}
+
+/* Divisor entre login e social */
+.divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 0 5px 0;
+}
+
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #000;
+}
+
+.divisor span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  color: #000;
+}
+
+.divisor span strong {
+  font-weight: 600;
+}
+
+/* Botões sociais */
+.botaoSocial {
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  padding: 0;
+  background: #fff;
+  border: 1.8px solid #CFCFCF;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .15s ease, box-shadow .15s ease;
+  margin-top: -4px;
+}
+
+.botaoSocial img {
+  width: 17px;
+  height: 17px;
+}
+
+.botaoSocial:hover {
+  background-color: #f3f3f3;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+/* Botão Apple */
+.apple {
+  background: #000;
+  color: #fff;
+}
+
+.apple img {
+  filter: brightness(0) invert(1);
+}
+
+.apple:hover {
+  background: #1a1a1a;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+
+/* Coluna da imagem da direita */
+.colDireita {
+  width: 95%;
+  height: 95%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  justify-content: center;
+  background: linear-gradient(180deg, #f7f7f7, #ececec);
+}
+
+.imagemDireita {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.botaoVoltar {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 20;
+}
+
+.botaoVoltar button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.botaoVoltar img {
+  width: 20px;
+  height: 20px;
+}
+
+.botaoVoltar button:hover {
+  transform: scale(1.20);
+  transition: transform 0.18s ease;
+}
+
+
+/* Responsividade para telas até 1200px */
+@media (max-width: 1200px) {
+
+  .colEsquerda {
+    padding: 40px 40px 40px 100px;
+  }
+
+  .logo {
+    width: 75px;
+  }
+
+  .card {
+    height: 680px;
+  }
+}
+
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+
+  .card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .colEsquerda {
+    padding: 40px;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tabs,
+  .inputsArea,
+  .botaoEntrar,
+  .divisor,
+  .botaoSocial {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .colDireita {
+    width: 100%;
+    height: 260px;
+    padding-right: 0;
+  }
+
+  .imagemDireita {
+    border-radius: 0;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+
+  .fundo {
+    padding: 20px;
+  }
+
+  .colEsquerda {
+    padding: 25px;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .logoArea {
+    justify-content: center;
+  }
+
+  .bemVindo h2 {
+    font-size: 22px;
+  }
+
+  .input {
+    padding: 12px 45px 12px 16px;
+    font-size: 13.5px;
+  }
+
+  .botaoEntrar {
+    font-size: 15px;
+    padding: 11px 0;
+  }
+
+  .colDireita {
+    height: 200px;
+  }
+}

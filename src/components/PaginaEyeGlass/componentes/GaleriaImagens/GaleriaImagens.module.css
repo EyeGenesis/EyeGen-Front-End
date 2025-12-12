@@ -1,4 +1,5 @@
 /* Área principal da galeria */
+
 .area-imagem {
   flex: 2;
   display: flex;
@@ -8,10 +9,17 @@
 
 /* CAIXA FIXA DA IMAGEM PRINCIPAL */
 .imagem-destaque {
-  width: 800px;     /* SEMPRE FIXO */
+  width: 800px; /* SEMPRE FIXO */
   height: 500px;
   border-radius: 12px;
   overflow: hidden; /* impede imagem de fugir */
+}
+
+.imagem-destaque {
+  width: 800px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +33,12 @@
 }
 
 /* MINIATURAS */
+.imagem-destaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .lista-miniaturas {
   margin-top: 24px;
   display: flex;
@@ -40,6 +54,7 @@
   border: 2px solid transparent;
   cursor: pointer;
   overflow: hidden; /* faz a imagem ficar presa no quadrado */
+  overflow: hidden;
   transition: all 0.2s ease;
 
   display: flex;
@@ -52,6 +67,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* preenche o quadrado */
+}
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* SELECIONADA */

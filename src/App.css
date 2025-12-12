@@ -7,6 +7,12 @@
 
 html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#root {
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');

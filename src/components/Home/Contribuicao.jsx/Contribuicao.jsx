@@ -1,16 +1,19 @@
 import React from 'react';
 import estilos from './Contribuicao.module.css';
 import { FaArrowRight } from 'react-icons/fa';
+import { useLanguage } from "../../../contexto/ContextoLingua";
 
 const Contribuicao = () => {
+  const { t } = useLanguage();
+
   return (
     <section className={estilos.secaoContribuicao}>
       
       <div className={estilos.containerTexto}>
-        <h2>Contribua também</h2>
-        <p>Se identificou com nosso produto e gostaria de contribuir?</p>
+        <h2>{t.home.contribuicao.titulo}</h2>
+        <p>{t.home.contribuicao.texto}</p>
         <a href="#" className={estilos.botaoSaibaComo}>
-          Saiba como <FaArrowRight size={14} />
+          {t.home.contribuicao.botao} <FaArrowRight size={14} />
         </a>
       </div>
 

@@ -1,0 +1,131 @@
+.secaoGuias {
+  background-color: #f95780;
+  padding: 4rem 0;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tituloPrincipal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.chipFiltro {
+  background-color: #E2E4E9;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 2rem;
+  width: fit-content;
+  margin: 0 auto 2.5rem auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.swiperContainer {
+  width: 100%;
+  overflow: visible !important;
+  padding: 0 1rem; 
+}
+
+.swiperSlide {
+  width: 80% !important;
+  max-width: 700px !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.9);
+}
+
+.swiperSlide.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cartao {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  line-height: 0;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.iconePlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.iconePlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.botaoMais {
+  background-color: #9eff00;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.botaoMais:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #9eff00;
+}
+
+.swiperPagination {
+  text-align: center;
+  margin-top: 2.5rem;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-color: #fff;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-border-radius: 2px;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+}
+
+.swiperPagination :global(.swiper-pagination-bullet-active) {
+  width: 20px !important;
+}
+
+
+/* --- responsividade  --- */
+@media (max-width: 768px) {
+  .tituloPrincipal {
+    font-size: 2rem;
+  }
+  .swiperSlide {
+    width: 90% !important;
+  }
+}

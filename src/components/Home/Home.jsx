@@ -7,15 +7,19 @@ import QuemUsa from "./QuemUsa/QuemUsa";
 import Comunidade from "./Comunidade/Comunidade";
 import Apoiadores from "./Apoiadores/Apoiadores";
 import Contribuicao from "./Contribuicao.jsx/Contribuicao";
+import { useLanguage } from "../../contexto/ContextoLingua";
 
 export default function Home() {
+
+  const { t } = useLanguage();
+
   return (
     <main>
       <section className={style.home}>
         <Hero />
         <div className={style.eyegen_ajuda}>
           <h1>
-            Como EYEGEN <br /> me ajuda?
+            {t.home.ajuda.titulo}
           </h1>
         </div>
         <Seguranca />

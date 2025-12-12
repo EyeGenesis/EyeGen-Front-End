@@ -1,0 +1,135 @@
+.secaoDesign {
+  background-color: #f7f8fc;
+  padding: 5rem 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.containerTexto {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.containerTexto h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.containerTexto p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.gradeImagens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.cardMidia {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+}
+
+.cardMidia img,
+.cardMidia video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagemGrade {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.containerProduto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagemProdutoPrincipal {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.nomeProduto {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.nomeProduto span {
+  font-weight: 400;
+}
+
+.precoProduto {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.botaoComprar {
+  background-color: #ff3b3b;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.botaoComprar:hover {
+  transform: scale(1.05);
+  background-color: #e03030;
+}
+
+/* --- responsividade --- */
+@media (max-width: 768px) {
+  .secaoDesign {
+    padding: 3rem 1.5rem;
+  }
+
+  .gradeImagens {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cardMidia {
+    padding-top: 56.25%;
+  }
+
+  .containerTexto h2 {
+    font-size: 2rem;
+  }
+
+  .nomeProduto {
+    font-size: 2.5rem;
+  }
+}

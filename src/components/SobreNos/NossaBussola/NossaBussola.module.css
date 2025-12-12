@@ -1,0 +1,111 @@
+.secaoBussola {
+  background-color: #8257e5;
+  padding: 6rem 0;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tituloPrincipal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.swiperContainer {
+  overflow: visible;
+  padding-bottom: 1rem;
+}
+
+.swiperSlide {
+  width: 400px;
+  height: auto;
+  display: flex;
+}
+
+.cartao {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 30px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.iconeWrapper {
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.cartao h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #000;
+}
+
+.cartao p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #444;
+}
+
+.containerNavegacao {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.navPrev,
+.navNext {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.navPrev:hover,
+.navNext:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.navPrev:disabled,
+.navNext:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- responsividade --- */
+@media (max-width: 768px) {
+  .tituloPrincipal {
+    font-size: 2rem;
+  }
+
+  .swiperSlide {
+    width: 320px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
