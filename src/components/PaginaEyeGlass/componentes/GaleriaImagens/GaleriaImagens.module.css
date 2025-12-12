@@ -32,16 +32,13 @@
 }
 
 /* MINIATURAS */
-<<<<<<< HEAD
-.imagem-destaque img {
+<<<<<<< HEAD .imagem-destaque img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-=======
->>>>>>> d1c6561d3d4576f049dff08195a1173cabf06959
-.lista-miniaturas {
+=======>>>>>>>d1c6561d3d4576f049dff08195a1173cabf06959 .lista-miniaturas {
   margin-top: 24px;
   display: flex;
   gap: 18px;
@@ -56,10 +53,7 @@
   border: 2px solid transparent;
   cursor: pointer;
   overflow: hidden; /* faz a imagem ficar presa no quadrado */
-<<<<<<< HEAD
   overflow: hidden;
-=======
->>>>>>> d1c6561d3d4576f049dff08195a1173cabf06959
   transition: all 0.2s ease;
 
   display: flex;
@@ -72,14 +66,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* preenche o quadrado */
-<<<<<<< HEAD
 }
 .miniatura img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-=======
->>>>>>> d1c6561d3d4576f049dff08195a1173cabf06959
 }
 
 /* SELECIONADA */

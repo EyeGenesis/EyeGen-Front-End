@@ -84,7 +84,6 @@ const SecaoDesign = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           />
-<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,15 +105,6 @@ const SecaoDesign = () => {
               {t.comprar.design.botao}
             </MotionLink>
           </motion.div>
-=======
-          <h3 className={estilos.nomeProduto}>
-            EYE <span>Glass</span>
-          </h3>
-          <p className={estilos.precoProduto}>R$ 2000,00</p>
-          <Link to="/fazer-pedido" className={estilos.botaoComprar}>
-            Comprar
-          </Link>
->>>>>>> d1c6561d3d4576f049dff08195a1173cabf06959
         </div>
       </div>
     </section>
