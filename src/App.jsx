@@ -14,7 +14,7 @@ import Suporte from "./components/Suporte/Suporte.jsx";
 import EspecProduto from "./components/EspecProduto/EspecProduto.jsx";
 import Cadastro from "./components/Cadastro/Cadastro.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
-
+import Cadastro_Fase from "./components/Cadastro_FaseTwo/Cadastro_Fase.jsx";
 import "./App.css";
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
       <Header />
 
       <Routes>
+        <Route path="/cadastro-fase" element={<Cadastro_Fase />} />
         <Route path="/" element={<Home />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
         <Route path="/planos" element={<Planos />} />

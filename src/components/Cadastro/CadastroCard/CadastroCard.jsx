@@ -8,10 +8,15 @@ import Imagem from './../../../assets/img/MulherCega2.png';
 import Seta_Voltar from './../../../assets/img/SetaVoltar.svg';
 import LogoEyegen from './../../../assets/img/eyegen.svg';
 import { useLanguage } from "../../../contexto/ContextoLingua"; 
+import Informacoes from "./../../../assets/Informalçoes_adicionais.png"
+import Dados from "./../../../assets/Dados_Cadastrais.png"
+import { useNavigate } from "react-router-dom";
+
 
 export default function CadastroCard() {
   const { t } = useLanguage(); 
 
+  const Navigate = useNavigate();
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -43,6 +48,7 @@ export default function CadastroCard() {
     }
 
     alert(t.cadastro.mensagens.sucesso);
+    Navigate("/cadastro-fase");
   }
 
   return (
@@ -57,18 +63,33 @@ export default function CadastroCard() {
             <img src={LogoEyegen} className={styles.logo} alt="Logo EyeGen" />
             <span className={styles.logoTexto}>EYEGEN</span>
           </div>
-
+        
 
           <p className={styles.subTexto}>
-            {t.cadastro.subtexto} <a href="#">{t.cadastro.linkComecaAqui}</a>
+            {t.cadastro.subtexto} <a href="">{t.cadastro.linkComecaAqui}</a>
           </p>
 
+        <div className={styles.wrapper}>
+              <div className={styles.dados}>
+                <img src={Dados} alt="dados" />
+
+                <div className={styles.bar}></div>
+
+              <img src={Informacoes}/>
+
+              </div>
+
+              <div className={styles.texto}> 
+                <p>Dados Cadastrais</p>
+                <p>Informações Adcionais</p>
+
+              </div>
+        </div>
 
           <div className={styles.tabs}>
-            <button className={styles.tab}>{t.cadastro.tabs.entrar}</button>
-            <button className={`${styles.tab} ${styles.active}`}>{t.cadastro.tabs.cadastrar}</button>
-          </div>
-
+              <button  onClick={() => Navigate("/login")} className={styles.tab}>{t.cadastro.tabs.entrar}</button>
+              <button className={`${styles.tab} ${styles.active}`}>{t.cadastro.tabs.cadastrar} <a href=""></a></button>
+            </div>
 
           <div className={styles.inputsArea}>
 

@@ -9,9 +9,12 @@ import UserIcon from './../../../assets/img/user.svg';
 import CadeadoIcon from './../../../assets/img/cadeado.svg';
 import LogoEyegen from './../../../assets/img/eyegen.svg';
 import { useLanguage } from "../../../contexto/ContextoLingua";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginCard() {
   const { t } = useLanguage(); 
+
+  const navigate = useNavigate();
 
   const [emailUser, setEmailUser] = useState("");
   const [senha, setSenha] = useState("");
@@ -62,7 +65,7 @@ export default function LoginCard() {
 
         <div className={styles.tabs}>
           <button className={`${styles.tab} ${styles.active}`}>{t.login.tabs.entrar}</button>
-          <button className={styles.tab}>{t.login.tabs.cadastrar}</button>
+          <button onClick={() => navigate("/cadastre-se")} className={styles.tab}>{t.login.tabs.cadastrar}</button>
         </div>
 
 
