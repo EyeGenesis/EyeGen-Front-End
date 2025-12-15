@@ -404,6 +404,7 @@ export const translations = {
         confirmarSenhaPlaceholder: "Confirme sua senha"
       },
       botao: "Cadastrar-se",
+      botaoContinuar : "Continuar ->",
       mensagens: {
         erroCampos: "Por favor, preencha todos os campos.",
         erroEmail: "Insira um e-mail válido.",
@@ -815,6 +816,7 @@ export const translations = {
         confirmarSenhaPlaceholder: "Confirm your password"
       },
       botao: "Sign Up",
+      botaoContinuar: "Continue ->",
       mensagens: {
         erroCampos: "Please fill in all fields.",
         erroEmail: "Enter a valid email.",

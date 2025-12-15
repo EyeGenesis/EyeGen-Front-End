@@ -146,7 +146,7 @@
 @media (max-width: 450px) {
     .hero_home {
         & .conteudo {
-            margin-top: 450px;
+            margin-top: 45vh;
             padding: 10px 20px;
         }
     }

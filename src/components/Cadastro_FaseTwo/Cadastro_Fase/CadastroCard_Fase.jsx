@@ -22,6 +22,7 @@ export default function CadastroCard() {
   const [telefone, setTelefone] = useState("");
   const [erro, setErro] = useState("");
 
+
   const clicouSim = () => setResposta("sim");
 
   const clicouNao = () => {
@@ -94,7 +95,9 @@ export default function CadastroCard() {
 
             <div className={styles.opcoes}>
               <div
-                className={`${styles.opcao} ${resposta === "sim" ? styles.ativo : ""}`}
+                className={`${styles.opcao} ${
+                  resposta === "sim" ? styles.ativo : ""
+                }`}
                 onClick={clicouSim}
               >
                 <span className={styles.quadrado} />
@@ -102,7 +105,9 @@ export default function CadastroCard() {
               </div>
 
               <div
-                className={`${styles.opcao} ${resposta === "nao" ? styles.ativo : ""}`}
+                className={`${styles.opcao} ${
+                  resposta === "nao" ? styles.ativo : ""
+                }`}
                 onClick={clicouNao}
               >
                 <span className={styles.quadrado} />
@@ -118,16 +123,13 @@ export default function CadastroCard() {
                 </summary>
 
                 <div className={styles.options}>
-                  {[
-                    "Cegueira Legal",
-                    "Cegueira Congênita",
-                    "Cegueira Noturna (Nictalopia)",
-                    "Ambliopia",
-                  ].map((item) => (
+                  {["Cegueira Total", "Baixa Visão"].map((item) => (
                     <button
                       key={item}
                       type="button"
-                      className={`${styles.option} ${tipo === item ? styles.optionAtiva : ""}`}
+                      className={`${styles.option} ${
+                        tipo === item ? styles.optionAtiva : ""
+                      }`}
                       onClick={() => {
                         setTipo(item);
                         const el = document.getElementById("tipoDefVisual");
@@ -157,9 +159,14 @@ export default function CadastroCard() {
             </div>
           </div>
 
+          
           {erro && <p className={styles.erro}>{erro}</p>}
 
-          <button type="button" className={styles.botaoCadastro} onClick={handleCadastro}>
+          <button
+            type="button"
+            className={styles.botaoCadastro}
+            onClick={handleCadastro}
+          >
             {t.cadastro.botao}
           </button>
         </div>

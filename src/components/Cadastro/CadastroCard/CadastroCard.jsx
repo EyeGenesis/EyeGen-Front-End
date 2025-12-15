@@ -81,7 +81,7 @@ export default function CadastroCard() {
 
               <div className={styles.texto}> 
                 <p>Dados Cadastrais</p>
-                <p>Informações Adcionais</p>
+                <p>Informações Adicionais</p>
 
               </div>
         </div>
@@ -155,7 +155,7 @@ export default function CadastroCard() {
 
 
           <button className={styles.botaoCadastro} onClick={handleCadastro}>
-            {t.cadastro.botao}
+            {t.cadastro.botaoContinuar}
           </button>
         </div>
 
