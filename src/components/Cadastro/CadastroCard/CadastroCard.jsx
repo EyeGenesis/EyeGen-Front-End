@@ -10,7 +10,7 @@ import LogoEyegen from './../../../assets/img/eyegen.svg';
 import { useLanguage } from "../../../contexto/ContextoLingua"; 
 import Informacoes from "./../../../assets/Informalçoes_adicionais.png"
 import Dados from "./../../../assets/Dados_Cadastrais.png"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 export default function CadastroCard() {
@@ -46,9 +46,19 @@ export default function CadastroCard() {
       setErro(t.cadastro.mensagens.erroSenha);
       return;
     }
+    if (senha.length < 8) {
+      setErro("A senha deve ter no mínimo 8 caracteres.");
+      return;
+    }
 
-    alert(t.cadastro.mensagens.sucesso);
-    Navigate("/cadastro-fase");
+
+    Navigate("/cadastro-fase", { 
+      state: { 
+        nome: nome, 
+        email: email, 
+        senha: senha 
+      } 
+    });
   }
 
   return (

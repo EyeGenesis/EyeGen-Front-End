@@ -10,6 +10,7 @@
   min-height: 100vh;
   background: #9A6BFF;
   display: flex;
+  margin-top: 5vh;
   align-items: center;
   justify-content: center;
 }
@@ -294,8 +295,7 @@
   }
 
   .imagemDireita {
-    height: 100%;
-    border-radius: 0;
+    display: none;
   }
 }
 
@@ -307,6 +307,7 @@
   }
 
   .colEsquerda {
+    width: 90%;
     padding: 25px;
     gap: 20px;
     text-align: center;
@@ -321,12 +322,12 @@
   }
 
   .inputsArea {
-    max-width: 320px;
+    width: 100%;
     margin: auto;
   }
 
   .botaoCadastro {
-    max-width: 320px;
+    width: 100%;
     margin: auto;
   }
 

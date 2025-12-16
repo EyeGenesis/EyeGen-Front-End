@@ -7,6 +7,7 @@
   min-height: 100vh;
   background: #9A6BFF;
   display: flex;
+  margin-top: 5vh;
   align-items: center;
   justify-content: center;
 }
@@ -335,20 +336,54 @@
 }
 
 @media (max-width: 900px) {
-  .card { flex-direction: column; height: auto; }
-  .colDireita { width: 100%; height: 280px; padding: 0; }
-  .colEsquerda { padding: 40px; }
-  .imagemDireita { height: 100%; border-radius: 0; }
+  .card { 
+    flex-direction: column; 
+    height: auto; 
+  }
+  .colDireita { 
+    width: 100%; 
+    height: 280px; 
+    padding: 0; 
+  }
+  .colEsquerda { padding: 40px; 
+  }
+  .imagemDireita { display: none;
+   }
 }
 
 @media (max-width: 600px) {
-  .pageWrapper { padding: 20px; }
-  .colEsquerda { padding: 25px; gap: 20px; text-align: center; }
-  .logoArea { justify-content: center; }
-  .tabs { margin: auto; }
-  .colDireita { height: 200px; }
-  .opcoes { max-width: 320px; margin: 0 auto; }
-  .selectBox { max-width: 320px; margin: 20px auto 0; }
-  .inputGroupTelefone { max-width: 320px; margin: 0 auto; }
-  .botaoCadastro { max-width: 320px; margin: 0 auto; }
+  .pageWrapper { 
+    padding: 20px;
+   }
+  .colEsquerda {
+    width: 90%;
+    padding: 25px;
+    gap: 20px;
+    text-align: center; 
+  }
+  .logoArea { 
+    justify-content: center; 
+  }
+  .tabs { 
+    margin: auto;
+   }
+  .colDireita {
+     height: 200px;
+     }
+  .opcoes {
+     max-width: 320px;
+      margin: 0 auto;
+    }
+  .selectBox { 
+    max-width: 320px;
+    margin: 20px auto 0;
+  }
+  .inputGroupTelefone {
+    max-width: 320px;
+    margin: 0 auto; 
+  }
+  .botaoCadastro {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }

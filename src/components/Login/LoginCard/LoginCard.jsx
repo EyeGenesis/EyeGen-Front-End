@@ -10,6 +10,7 @@ import CadeadoIcon from './../../../assets/img/cadeado.svg';
 import LogoEyegen from './../../../assets/img/eyegen.svg';
 import { useLanguage } from "../../../contexto/ContextoLingua";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../../services/authService";
 
 export default function LoginCard() {
   const { t } = useLanguage(); 
@@ -37,9 +38,28 @@ export default function LoginCard() {
       setErro(t.login.mensagens.erroTamanhoSenha);
       return;
     }
+    login(emailUser, senha)
+    .then(() => {
+      alert(t.login.mensagens.sucesso);
+      navigate("/");
+    })
+    .catch((error) => {
+  console.error("Erro no login:", error);
 
+  if (error.response) {
+    setErro(
+      error.response.data?.message ||
+      `Erro ${error.response.status}`
+    );
 
-    alert(t.login.mensagens.sucesso);
+  } else if (error.request) {
+    setErro("Servidor indisponível ou sem resposta.");
+
+  } else {
+    setErro(error.message || "Erro inesperado.");
+  }
+});
+   
   }
 
   return (
@@ -116,9 +136,7 @@ export default function LoginCard() {
 
 
         <div className={styles.divisor}>
-          {/* Para manter o estilo bold em "Entrar", usamos dangerouslySetInnerHTML ou separamos no JSON. 
-              Aqui vou simplificar exibindo o texto traduzido. 
-              Se quiser manter o "Entrar" em negrito, você pode quebrar a string no JSON. */}
+          
           <span>{t.login.divisor}</span>
         </div>
 

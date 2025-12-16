@@ -11,7 +11,8 @@ import Informacoes_add from "./../../../assets/Informalçoes_adicionais_add.png"
 import iconTelefone from "./../../../assets/img/icon.svg";
 
 import { useLanguage } from "../../../contexto/ContextoLingua";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { cadastrarUsuario } from "../../../services/cadastroService";
 
 export default function CadastroCard() {
   const { t } = useLanguage();
@@ -22,7 +23,32 @@ export default function CadastroCard() {
   const [telefone, setTelefone] = useState("");
   const [erro, setErro] = useState("");
 
+  const location = useLocation();
+  const dadosEtapa1 = location.state || {};
 
+  const [loading, setLoading] = useState(false);
+
+  const [diaNasc, setDiaNasc] = useState("");
+  const [mesNasc, setMesNasc] = useState("");
+  const [anoNasc, setAnoNasc] = useState("");
+
+  const dias = Array.from({ length: 31 }, (_, i) => i + 1);
+  const meses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  const anoAtual = new Date().getFullYear();
+  const anos = Array.from({ length: 100 }, (_, i) => anoAtual - i);
   const clicouSim = () => setResposta("sim");
 
   const clicouNao = () => {
@@ -47,9 +73,70 @@ export default function CadastroCard() {
       setErro("Telefone obrigatório.");
       return;
     }
+    if (!diaNasc || !mesNasc || !anoNasc) {
+      setErro("Informe sua data de nascimento completa.");
+      return;
+    }
+    const dataFormatada = `${anoNasc}-${mesNasc
+      .toString()
+      .padStart(2, "0")}-${diaNasc.toString().padStart(2, "0")}`;
 
-    alert(t.cadastro.mensagens.sucesso);
-    navigate("/");
+    const dataValida = new Date(dataFormatada);
+
+    if (isNaN(dataValida.getTime())) {
+      setErro("Data inválida.");
+      return;
+    }
+
+    setLoading(true);
+
+    let tipoDeficienciaEnum = "NAO_POSSUI_DEFICIENCIA";
+
+    if (resposta === "sim") {
+      if (tipo === "Cegueira Total") {
+        tipoDeficienciaEnum = "CEGUEIRA_TOTAL";
+      } else if (tipo === "Baixa Visão") {
+        tipoDeficienciaEnum = "BAIXA_VISAO";
+      }
+    }
+
+    const usuarioParaSalvar = {
+      nome: dadosEtapa1.nome,
+      email: dadosEtapa1.email,
+      senha: dadosEtapa1.senha,
+      telefone: telefone,
+      deficienciaVisual: tipoDeficienciaEnum,
+      dataNascimento: dataFormatada,
+    };
+
+     cadastrarUsuario(usuarioParaSalvar)
+    .then(() => {
+      alert("Cadastro realizado com sucesso!");
+      navigate("/login");
+    })
+    .catch((error) => {
+  if (error.response) {
+    // A requisição foi feita e a API respondeu com erro (4xx ou 5xx)
+    const mensagem =
+      error.response.data?.message ||
+      error.response.data?.error ||
+      "Erro retornado pelo servidor.";
+
+    setErro(mensagem);
+    console.error("Erro da API:", error.response);
+
+  } else if (error.request) {
+    // A requisição foi feita, mas não houve resposta
+    setErro("Não foi possível se conectar ao servidor. Verifique sua internet.");
+    console.error("Sem resposta do servidor:", error.request);
+
+  } else {
+    // Erro ao configurar a requisição
+    setErro("Erro inesperado ao realizar a requisição.");
+    console.error("Erro interno:", error.message);
+  }
+});
+     
   }
 
   return (
@@ -159,7 +246,61 @@ export default function CadastroCard() {
             </div>
           </div>
 
+          <div className={styles.inputGroup}>
+            <label className={styles.labelData}>Data de Nascimento</label>
+
+            <div className={styles.containerData}>
+              {/* SELECT DIA */}
+              <select
+                className={styles.selectData}
+                value={diaNasc}
+                onChange={(e) => setDiaNasc(e.target.value)}
+              >
+                <option value="" disabled>
+                  Dia
+                </option>
+                {dias.map((d) => (
+                  <option key={d} value={d}>
+                    {d}
+                  </option>
+                ))}
+              </select>
+
+             
+              <select
+                className={styles.selectData}
+                value={mesNasc}
+                onChange={(e) => setMesNasc(e.target.value)}
+              >
+                <option value="" disabled>
+                  Mês
+                </option>
+                {meses.map((m, index) => (
+                  
+                  <option key={index} value={index + 1}>
+                    {m}
+                  </option>
+                ))}
+              </select>
+
           
+              <select
+                className={styles.selectData}
+                value={anoNasc}
+                onChange={(e) => setAnoNasc(e.target.value)}
+              >
+                <option value="" disabled>
+                  Ano
+                </option>
+                {anos.map((a) => (
+                  <option key={a} value={a}>
+                    {a}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
           {erro && <p className={styles.erro}>{erro}</p>}
 
           <button
