@@ -148,14 +148,6 @@ EyeGen_Front-End/
 
 ````
 
-## 🧭 Jornada do Usuário
-
-Acesse a jornada completa aqui: [Em Breve]
-
-## 🎨 Design System
-
-- Em Breve
-
 ## 🧰 Pré-Requisitos para Rodar Localmente
 
 - Node.js
