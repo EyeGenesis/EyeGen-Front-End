@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import styles from './InfoCompra.module.css';
+import MasterCard from './../../../../assets/img/mastercard.png';
+import Pix from './../../../../assets/img/pix.png';
+import Visa from './../../../../assets/img/visa.png';
+import Paypal from './../../../../assets/img/paypal.png';
+import Estrela from './../../../../assets/img/star.svg';
 
 export default function InfoCompra() {
 
@@ -16,12 +21,10 @@ export default function InfoCompra() {
   const cores = ["#ff4c84", "#3bb4ff", "#7bed8d", "#b19bff", "#d7ff26"];
 
   const metodosPagamento = [
-    "../../src/assets/img/mastercard.png",
-    "../../src/assets/img/pix.png",
-    "../../src/assets/img/visa.png",
-    "../../src/assets/img/paypal.png",
-    "../../src/assets/img/googlepay.png",
-    "../../src/assets/img/apay.svg"
+    MasterCard,
+    Pix,
+    Visa,
+    Paypal,
   ];
 
   // Funções de quantidade
@@ -56,7 +59,7 @@ export default function InfoCompra() {
           {[1,2,3,4,5].map(i => (
             <img
               key={i}
-              src="../../src/assets/img/star.svg"
+              src={Estrela}
               className={styles["estrela"]}
               alt="estrela"
             />
@@ -70,7 +73,7 @@ export default function InfoCompra() {
         className={styles["preco"]}
         style={{ fontFamily: "'Exo 2', sans-serif", fontWeight: 600 }}
       >
-        R$ 2000.00
+        R$ 3000.00
       </p>
 
       <hr className={styles["linha"]} />

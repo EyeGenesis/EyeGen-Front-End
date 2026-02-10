@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import styles from './GaleriaImagens.module.css';
+import ImagemOculosUm from './../../../../assets/img/ImagemOculosUm.png'
+import ImagemOculosSete from '../../../../assets/img/ImagemOculosSete.png'
+import ImagemOculosOito from '../../../../assets/img/ImagemOculosOito.png'
+import ImagemOculosCinco from '../../../../assets/img/ImagemOculosCinco.png'
 
 export default function GaleriaImagens() {
 
   const imagens = [
-    "../../src/assets/img/ImagemOculosUm.png",
-    "../../src/assets/img/ImagemOculosSete.png",
-    "../../src/assets/img/ImagemOculosOito.png",
-    "../../src/assets/img/ImagemOculosCinco.png"
+    ImagemOculosUm,
+    ImagemOculosSete,
+    ImagemOculosOito,
+    ImagemOculosCinco
   ];
 
   const [selecionada, setSelecionada] = useState(0);
