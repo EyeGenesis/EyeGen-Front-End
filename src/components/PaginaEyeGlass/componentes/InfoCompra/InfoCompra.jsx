@@ -119,7 +119,7 @@ export default function InfoCompra() {
               metodoAtivo === index ? styles["pagamento-selecionado"] : ""
             }`}
           >
-            <img src={img} alt="Método de pagamento" />
+            <img src={img} alt="Método de pagamento"/>
           </div>
         ))}
       </div>
