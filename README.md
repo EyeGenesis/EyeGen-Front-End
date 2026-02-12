@@ -44,17 +44,9 @@ No EyeGen, temos como principal propósito entregar uma plataforma **inclusiva**
 
 ---
 
-## ⭐ Principais Funcionalidades
-
-### 🛒 **Fluxo de compra do EyeGlass**
-
-- Exibição detalhada do produto e descrições técnicas  
-- Seleção do plano no momento da compra  
-- Integração com API de pagamento  
-- Tela de confirmação de compra concluída  
+## ⭐ Principais Funcionalidades  
 
 ### 📦 **Assinatura dos Planos**
-
 - Listagem dos planos disponíveis:
   - 🟦**Origin**: gratuito, incluso ao adquirir o EyeGlass  
   - 🟩**Infinity**: plano intermediário com recursos extras  
@@ -65,8 +57,7 @@ No EyeGen, temos como principal propósito entregar uma plataforma **inclusiva**
 ### 🔐 **Login**
 
 - Formulário de autenticação (e-mail e senha)  
-- Redirecionamento para a página inicial e criação de página do perfil  
-- Login com Google, Apple e Facebook
+- Redirecionamento para a página inicial 
 
 ### 📝 **Cadastro**
 
