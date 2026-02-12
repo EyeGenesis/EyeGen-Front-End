@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken, clearToken } from "../utils/tokenStorage";
 
 export const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://eyegen-back-end.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
